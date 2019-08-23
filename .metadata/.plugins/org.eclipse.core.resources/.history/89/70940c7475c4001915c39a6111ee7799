@@ -1,0 +1,24 @@
+/*
+ ============================================================================
+ Name        : Clase1.c
+ Author      : Agustin
+ Version     :
+ Copyright   : GLP 3
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void) {
+	int num1;
+	int num2;
+	int resultado;
+	char texto[18];
+	scanf("Ingrese un numero:","%d",&texto,&num1);
+	scanf("%d",&num2);
+	resultado = num1 + num2;
+	printf("El valor es: %d",resultado);
+	/*return EXIT_SUCCESS;*/
+}
