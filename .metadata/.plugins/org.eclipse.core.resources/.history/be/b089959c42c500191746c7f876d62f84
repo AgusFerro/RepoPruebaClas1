@@ -23,6 +23,6 @@ int main(void) {
 		acumulador = acumulador + numero;
 	}
 	promedio = acumulador / 5;
-	printf("El promedio es: %f",promedio);
+	printf("El promedio es: %d",promedio);
 
 }
