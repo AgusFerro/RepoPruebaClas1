@@ -1,6 +1,6 @@
 /*
  ============================================================================
- Name        : Clase1.c
+ Name        : Clase.c
  Author      : Agustin
  Version     :
  Copyright   : GLP 3
@@ -11,15 +11,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int main(void)
-{
-	int num1;
-	int num2;
-	int resultado;
-	printf("Ingresa un numero");
-	scanf("%d",&num1);
-	printf("Ingresa un numero");
-	scanf("%d",&num2);
-	resultado = num1 + num2;
-	printf("El valor es: %d",resultado);
+int main(void) {
+	puts("Hola"); /* prints Hola */
+	return EXIT_SUCCESS;
 }

@@ -1,15 +1,15 @@
-22:09:12 **** Incremental Build of configuration Debug for project Clase 2 ****
+19:15:15 **** Build of configuration Debug for project Clase 03 ****
 make all 
-Building file: ../src/Clase 2.c
+Building file: ../src/Clase 03.c
 Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Clase 2.d" -MT"src/Clase\ 2.d" -o "src/Clase 2.o" "../src/Clase 2.c"
-Finished building: ../src/Clase 2.c
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Clase 03.d" -MT"src/Clase\ 03.d" -o "src/Clase 03.o" "../src/Clase 03.c"
+Finished building: ../src/Clase 03.c
  
-Building target: Clase 2
+Building target: Clase 03
 Invoking: GCC C Linker
-gcc  -o "Clase 2"  ./src/Clase\ 2.o   
-Finished building target: Clase 2
+gcc  -o "Clase 03"  ./src/Clase\ 03.o   
+Finished building target: Clase 03
  
-22:09:19 **** Incremental Build of configuration Debug for project Clase 2 ****
+19:15:20 **** Incremental Build of configuration Debug for project Clase 03 ****
 make all 
 make: No se hace nada para 'all'.
