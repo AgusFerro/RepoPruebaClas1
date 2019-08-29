@@ -10,7 +10,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-int calculoMaxYMin(int *flagFun,int numeroFun,int *MaxFun, int *MinFun);
+int calculoMaxYMin(int *pFlag,int numeroFun,int *pMax, int *pMin);
 
 int main(void)
 {
@@ -37,16 +37,17 @@ int main(void)
 
 }
 
-int calculoMaxYMin(int *flagFun,int numeroFun,int *MaxFun,int *MinFun)
+int calculoMaxYMin(int *pFlag,int numeroFun,int *pMax,int *pMin)
 {
-	int Maximo;
-	int Minimo;
+	int Maximo = *pMax;
+	int Minimo = *pMin;
+	int flag = *pFlag;
 
-	if(flagFun == 0)
+	if(flag == 0)
 	{
 		Maximo = numeroFun;
 		Minimo = numeroFun;
-		*flagFun = 1;
+		*pFlag = 1;
 		printf("Entro");
 	}
 
@@ -62,8 +63,8 @@ int calculoMaxYMin(int *flagFun,int numeroFun,int *MaxFun,int *MinFun)
 		printf("Min");
 	}
 
-	*MaxFun = Maximo;
-	*MinFun = Minimo;
+	*pMax = Maximo;
+	*pMin = Minimo;
 
 	return 0;
 }
