@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+
 int getNumero(int *pNumero,int max,int min, int Reintentos);
 
 int main(void)
@@ -11,7 +12,7 @@ int main(void)
 
 	if(getNumero(&numero,maximo,minimo,reintentos) == 0)
 	{
-		printf("El numero es: %d",numero);
+		printf("\nEl numero es: %d",numero);
 	}
 	else
 	{
@@ -23,13 +24,13 @@ int getNumero(int *pNumero,int max,int min, int fReintentos)
 {
 	int numeroAux = *pNumero;
 
-		printf("Ingrese un numero");
+		printf("\nIngrese un numero ");
 		scanf("%d",&numeroAux);
 		while(!(numeroAux <= max && numeroAux >= min) && fReintentos > 0)
 		{
 			fReintentos--;
 
-			printf("Reingrese numero, cantidad de reintentos: %d",fReintentos);
+			printf("\nReingrese numero, cantidad de reintentos: %d ",fReintentos);
 
 			__fpurge(stdin);
 
