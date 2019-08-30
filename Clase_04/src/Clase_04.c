@@ -3,6 +3,10 @@
 
 int getNumero(int *pNumero,int max,int min, int Reintentos);
 
+#define MSG_NUM "Ingrese numero "
+#define MSG_RNUM "Reingrese numero, cantidad de reintentos: "
+#define MSG_ERR "ERROR"
+
 int main(void)
 {	int maximo = 99;
 	int minimo = 1;
@@ -16,7 +20,7 @@ int main(void)
 	}
 	else
 	{
-		printf("ERROR");
+		printf("%s",MSG_ERR);
 	}
 }
 
@@ -24,13 +28,13 @@ int getNumero(int *pNumero,int max,int min, int fReintentos)
 {
 	int numeroAux = *pNumero;
 
-		printf("\nIngrese un numero ");
+		printf("%s",MSG_NUM);
 		scanf("%d",&numeroAux);
 		while(!(numeroAux <= max && numeroAux >= min) && fReintentos > 0)
 		{
 			fReintentos--;
 
-			printf("\nReingrese numero, cantidad de reintentos: %d ",fReintentos);
+			printf("%s ""%d",MSG_RNUM,fReintentos);
 
 			__fpurge(stdin);
 

@@ -1,10 +1,10 @@
-21:11:19 **** Incremental Build of configuration Debug for project Clase_04 ****
+21:41:40 **** Incremental Build of configuration Debug for project Clase_04 ****
 make all 
 Building file: ../src/Clase_04.c
 Invoking: GCC C Compiler
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Clase_04.d" -MT"src/Clase_04.o" -o "src/Clase_04.o" "../src/Clase_04.c"
 ../src/Clase_04.c: In function ‘getNumero’:
-../src/Clase_04.c:35:4: warning: implicit declaration of function ‘__fpurge’ [-Wimplicit-function-declaration]
+../src/Clase_04.c:39:4: warning: implicit declaration of function ‘__fpurge’ [-Wimplicit-function-declaration]
     __fpurge(stdin);
     ^~~~~~~~
 Finished building: ../src/Clase_04.c
@@ -14,9 +14,6 @@ Invoking: GCC C Linker
 gcc  -o "Clase_04"  ./src/Clase_04.o   
 Finished building target: Clase_04
  
-21:11:22 **** Incremental Build of configuration Debug for project Clase_04 ****
-make all 
-make: No se hace nada para 'all'.
-21:11:28 **** Incremental Build of configuration Debug for project Clase_04 ****
+21:41:44 **** Incremental Build of configuration Debug for project Clase_04 ****
 make all 
 make: No se hace nada para 'all'.
