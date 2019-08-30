@@ -1,10 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "utn.h"
 
-int getNumero(int *pNumero,int max,int min, int Reintentos);
 
-#define MSG_NUM "Ingrese numero "
-#define MSG_RNUM "Reingrese numero, cantidad de reintentos: "
 #define MSG_ERR "ERROR"
 
 int main(void)
@@ -24,31 +22,4 @@ int main(void)
 	}
 }
 
-int getNumero(int *pNumero,int max,int min, int fReintentos)
-{
-	int numeroAux = *pNumero;
 
-		printf("%s",MSG_NUM);
-		scanf("%d",&numeroAux);
-		while(!(numeroAux <= max && numeroAux >= min) && fReintentos > 0)
-		{
-			fReintentos--;
-
-			printf("%s ""%d",MSG_RNUM,fReintentos);
-
-			__fpurge(stdin);
-
-			scanf("%d",&numeroAux);
-		}
-
-		if(fReintentos == 0)
-		{
-			return -1;
-		}
-		else
-		{
-			*pNumero = numeroAux;
-			return 0;
-		}
-
-}
