@@ -7,8 +7,6 @@
 #include <stdio.h>
 #include "utn.h"
 
-
-
 int getNumero(int *pNumero,int max,int min, int fReintentos)
 {
 	int numeroAux = *pNumero;
