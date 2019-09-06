@@ -4,10 +4,11 @@
  *  Created on: 4 sep. 2019
  *      Author: alumno
  */
+#include "Clase-06.h"
+
 #include <stdio.h>
 #include <stdio_ext.h>
 #include <stdlib.h>
-#include "Clase-05.h"
 
 int obtenerMayorArrayInt(int *pArray, int limite, int *pMayor)
 {
