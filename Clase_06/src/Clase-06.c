@@ -87,7 +87,7 @@ int printArrayInt(int *pArray , int limite)
 	}
 	return retorno;
 }
-// Carga Array con enteros
+
 int getArrayInt(	int *pArray,
 					int limite,
 					char *pMensaje,
@@ -153,4 +153,48 @@ int getInt(	int *pResultado,
 		reintentos--;
 	}while(reintentos >= 0);
 	return retorno;
+}
+
+int ordenamientoArrayInt(int *pArray , int limite)
+{
+	int i,j,aux;
+
+	for(i = 0;i < limite-1;i++)
+		{
+			for(j = i+1;j < limite;j++)
+			{
+				if(pArray[i] > pArray[j])
+					//       < para que ordene de mayor a menor
+				{
+					aux = pArray[i];
+					pArray[i] = pArray[j];
+					pArray[j] = aux;
+
+				}
+			}
+		}
+	return 0;
+}
+
+int ordenamientoEficienteArrayInt(int *pArray, int limite)
+{
+	int j,aux,flagNoEstaOrdenado = 1;
+
+	while(flagNoEstaOrdenado == 1)
+	{
+		flagNoEstaOrdenado = 0;
+		for(j=1; j<limite; j++)
+		{
+			if(pArray[j] < pArray[j - 1])
+				//       > para que ordene de mayor a menor
+			{
+				aux = pArray[j];
+				pArray[j] = pArray[j - 1];
+				pArray[j - 1] = aux;
+				flagNoEstaOrdenado = 1;
+
+			}
+		}
+	}
+		return 0;
 }
