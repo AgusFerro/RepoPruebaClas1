@@ -37,6 +37,6 @@ int getInt(	int *pResultado,
 void getString(char mensaje[],char input[])
 {
     printf("%s",mensaje);
-    gets(input);
+    scanf("%s",input);
 }
 
