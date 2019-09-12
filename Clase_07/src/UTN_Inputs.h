@@ -18,6 +18,12 @@ Param6: Cantidad de veces que puede ingresarlo con error
 Para3: Valor con el que se inicializa
 */
 int getInt(	int *pResultado, char *pMensaje, char *pMensajeError, int minimo, int maximo, int reintentos);
+/**
+ * \brief Solicita un texto al usuario y lo devuelve
+ * \param mensaje Es el mensaje a ser mostrado
+ * \param input Array donde se cargará el texto ingresado
+ * \return void
+ */
+void getString(char mensaje[],char input[]);
 
-
-#endif /* UTN_INPUTS_H_ */
+#endif /* UTN_ARRAY_H_ */

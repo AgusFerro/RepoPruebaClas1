@@ -8,6 +8,8 @@
 #ifndef UTN_ARRAY_H_
 #define UTN_ARRAY_H_
 
+#define CANT_EL 4
+
 /*Descr: Inicializa un Array de enteros
 Param1: Array por referencia
 Param2: Elementos del Array
@@ -55,6 +57,12 @@ Param1: Array por referencia
 Param2: Elementos del Array
 */
 int OrdenaArrayInt(int* pArray,int limite);
+
+int cargarSetDatos(char pArrayNombre[][50], int* aLegajo, char* aSexo,int* aEdad,int* aNota1P,int* aNota2P, float* aPromedio,int limite);
+int mostrarEstudiante(char pArrayNombre[50],int aLegajo, char aSexo, int aEdad, int aNota1P,int aNota2P, float aPromedio);
+int mostrarEstudiantes(char pArrayNombre[][50],int* aLegajo, char* aSexo,int* aEdad,int* aNota1P,int* aNota2P, float* aPromedio,int limite);
+int ordenarLegajoEstudiantes(char pArrayNombre[][50],int* aLegajo, char* aSexo,int* aEdad,int* aNota1P,int* aNota2P, float* aPromedio,int limite, int orden);
+int ordenarPromedioEstudiantes(char pArrayNombre[][50],int* aLegajo, char* aSexo,int* aEdad,int* aNota1P,int* aNota2P, float* aPromedio,int limite);
 
 
 #endif /* UTN_ARRAY_H_ */

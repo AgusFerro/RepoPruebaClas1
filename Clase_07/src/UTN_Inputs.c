@@ -6,7 +6,9 @@
  */
 
 #include <stdio.h>
+#include <stdio_ext.h>
 #include <stdlib.h>
+#include "UTN_Inputs.h"
 
 int getInt(	int *pResultado,
 			char *pMensaje,
@@ -31,5 +33,10 @@ int getInt(	int *pResultado,
 		reintentos--;
 	}while(reintentos >= 0);
 	return retorno;
+}
+void getString(char mensaje[],char input[])
+{
+    printf("%s",mensaje);
+    gets(input);
 }
 
