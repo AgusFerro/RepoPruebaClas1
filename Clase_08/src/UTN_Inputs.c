@@ -50,15 +50,7 @@ int getInt(	int *pResultado,
 			printf("No es un numero");
 			reintentos--;
 		};
-		/*buffer = atoi(numero);
-		if(buffer >= minimo && buffer <= maximo)
-		{
-			*pResultado = buffer;
-			retorno = 0;
-			break;
-		}
-		printf("%s",pMensajeError);
-		reintentos--;*/
+
 	}while(reintentos >= 0);
 	return retorno;
 }
@@ -66,9 +58,6 @@ int getInt(	int *pResultado,
 void getString(char mensaje[],char input[])
 {
     printf("%s",mensaje);
-    //scanf("%s",input);
-
-    // fgets es una funcion que ya existe!!!
-    fgets(input,sizeof(*input),stdin);
+    fgets(input,strlen(input),stdin);
 }
 

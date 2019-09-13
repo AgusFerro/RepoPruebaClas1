@@ -1,3 +1,12 @@
-18:39:54 **** Incremental Build of configuration Debug for project Clase_07 ****
+22:15:10 **** Incremental Build of configuration Debug for project Clase_08 ****
 make all 
-make: No se hace nada para 'all'.
+Building file: ../src/UTN_Inputs.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/UTN_Inputs.d" -MT"src/UTN_Inputs.o" -o "src/UTN_Inputs.o" "../src/UTN_Inputs.c"
+Finished building: ../src/UTN_Inputs.c
+ 
+Building target: Clase_08
+Invoking: GCC C Linker
+gcc  -o "Clase_08"  ./src/Clase_08.o ./src/UTN_Array.o ./src/UTN_Inputs.o ./src/UTN_Validaciones.o   
+Finished building target: Clase_08
+ 
