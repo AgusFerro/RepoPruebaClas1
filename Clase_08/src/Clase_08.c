@@ -18,7 +18,7 @@ int imprimeMenuModif();
 
 int main(void)
 {
-	int opcion,submenu,indice,j,flagOrdenado;
+	int opcion,submenu,indice,j;
 	int reintentos = 3;
 	Persona vecPersona[3],aux;
 
@@ -37,8 +37,8 @@ int main(void)
 			printf("\nIngrese todos los datos de la persona %d",i+1);
 			__fpurge(stdin);
 			getString("\nIngrese nombre","Error",vecPersona[i].nombre);
-			getInt(&vecPersona[i].edad,"\nIngrese edad","Error",10,90,5);
-			getInt(&vecPersona[i].dni,"\nIngrese DNI","Error",100,900,5);
+			getInt(&vecPersona[i].edad,"\nIngrese edad","Error",10,90,3);
+			getInt(&vecPersona[i].dni,"\nIngrese DNI","Error",100,900,3);
 			vecPersona[i].isEmpty = 1;
 			}
 			imprimeMenu();
@@ -111,19 +111,16 @@ int main(void)
 			break;
 
 		case 5:
-			while(flagOrdenado==-1)
+			for(int i=0; i<3-1;i++)
 			{
-			 flagOrdenado=0;
-
-			  for(int i=0; i<(3-1);i++)
+			  for(int k=i+1;k<3;k++)
 			  {
-				  if((strcmp(vecPersona[i].nombre,vecPersona[i+1].nombre))>0)
+				  if((strcmp(vecPersona[i].nombre,vecPersona[k].nombre))>0)
 			    {
 
 			    aux = vecPersona[i];
-			    vecPersona[i]=vecPersona[i+1];
-			    vecPersona[i+1]=aux;
-			    flagOrdenado=-1;
+			    vecPersona[i]=vecPersona[k];
+			    vecPersona[k]=aux;
 			    }
 			  }
 

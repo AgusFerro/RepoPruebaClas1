@@ -1,4 +1,4 @@
-21:50:12 **** Incremental Build of configuration Debug for project Clase_08 ****
+22:09:35 **** Incremental Build of configuration Debug for project Clase_08 ****
 make all 
 Building file: ../src/Clase_08.c
 Invoking: GCC C Compiler
@@ -10,3 +10,6 @@ Invoking: GCC C Linker
 gcc  -o "Clase_08"  ./src/Clase_08.o ./src/UTN_Array.o ./src/UTN_Inputs.o ./src/UTN_Validaciones.o   
 Finished building target: Clase_08
  
+22:09:40 **** Incremental Build of configuration Debug for project Clase_08 ****
+make all 
+make: No se hace nada para 'all'.
