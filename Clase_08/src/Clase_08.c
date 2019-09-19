@@ -71,11 +71,14 @@ int main(void)
 			getInt(&submenu,"Que desea modificar?","Error",1,3,1);
 			for(int i=0;i<3;i++)
 			{
-				printf("\n %d_ Nombre %s Edad %d DNI %d",
-						i,
-						vecPersona[i].nombre,
-						vecPersona[i].edad,
-						vecPersona[i].dni);
+				if(vecPersona[i].isEmpty != 0)
+				{
+					printf("\n %d_ Nombre %s Edad %d DNI %d",
+							i,
+							vecPersona[i].nombre,
+							vecPersona[i].edad,
+							vecPersona[i].dni);
+				}
 			}
 			__fpurge(stdin);
 			getInt(&indice,"Cual desea modificar?","Error",0,2,1);
@@ -107,6 +110,7 @@ int main(void)
 							vecPersona[i].dni);
 				}
 			}
+			printf("\n");
 
 			break;
 
