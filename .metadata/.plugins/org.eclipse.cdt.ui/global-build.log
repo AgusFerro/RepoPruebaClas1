@@ -1,9 +1,9 @@
-22:15:10 **** Incremental Build of configuration Debug for project Clase_08 ****
+21:50:12 **** Incremental Build of configuration Debug for project Clase_08 ****
 make all 
-Building file: ../src/UTN_Inputs.c
+Building file: ../src/Clase_08.c
 Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/UTN_Inputs.d" -MT"src/UTN_Inputs.o" -o "src/UTN_Inputs.o" "../src/UTN_Inputs.c"
-Finished building: ../src/UTN_Inputs.c
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Clase_08.d" -MT"src/Clase_08.o" -o "src/Clase_08.o" "../src/Clase_08.c"
+Finished building: ../src/Clase_08.c
  
 Building target: Clase_08
 Invoking: GCC C Linker

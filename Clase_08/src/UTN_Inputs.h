@@ -24,6 +24,7 @@ int getInt(	int *pResultado, char *pMensaje, char *pMensajeError, int minimo, in
  * \param input Array donde se cargará el texto ingresado
  * \return void
  */
-void getString(char mensaje[],char input[]);
+int getString(char* pMessage,char* pErrMessage, char* pString);
+int isLetter(char* string);
 
 #endif /* UTN_ARRAY_H_ */

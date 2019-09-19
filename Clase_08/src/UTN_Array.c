@@ -163,7 +163,7 @@ int cargarSetDatos(char pArrayNombre[][50], int* aLegajo, char* aSexo,int* aEdad
     for (i=0; i<limite; i++)
     {
         fflush(stdin);
-        getString("Ingrese Nombre del Alumno ",auxNombre);
+        getString("Ingrese Nombre del Alumno ","Error",auxNombre);
         //arrayNombres[i]=arrayNombres;  NOOO
         strcpy(pArrayNombre[i],auxNombre);
 
