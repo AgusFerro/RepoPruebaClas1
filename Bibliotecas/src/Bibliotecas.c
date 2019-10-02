@@ -10,8 +10,16 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include "Inputs.h"
 
-int main(void) {
-	puts("!!!Hello World!!!"); /* prints !!!Hello World!!! */
-	return EXIT_SUCCESS;
+int main(void)
+{
+	char nombre[50];
+	char letra;
+
+	//utn_getName("Ingrese Nombre","Error",10,50,3,nombre);
+	//printf("%s",nombre);
+
+	utn_getChar("Ingrese de a hasta Z","Error",'a',"Z",3,&letra);
+
 }

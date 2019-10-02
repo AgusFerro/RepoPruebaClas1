@@ -1,15 +1,15 @@
 #include "Validaciones.h"
 
-int isValidName(char* stringRecibido)   //si fuera un numero podrìa necesitar parametros para validar max y min
+int isValidName(char* stringRecibido)
 {
-    int retorno=1;  // para las funciones isValid arranco con verdadero y cambio cuando encuentro un error
+    int retorno=0;
     int i;
     for(i=0;stringRecibido[i]!='\0';i++)
     {
-        //printf("%d",i);
+
         if(stringRecibido[i]<'A' || (stringRecibido[i]>'Z' && stringRecibido[i]<'a') || stringRecibido[i]>'z')// o ((stringRecibido[i]<'A' || (stringRecibido[i]>'Z') && (stringRecibido[i]<'a' || stringRecibido[i]>'z'))
         {
-            retorno=0;
+            retorno=-1;
             break;
         }
     }
@@ -18,13 +18,13 @@ int isValidName(char* stringRecibido)   //si fuera un numero podrìa necesitar p
 
 int isValidNumber(char* stringRecibido)
 {
-    int retorno=1;  // para las funciones isValid arranco con verdadero y cambio cuando encuentro un error
+    int retorno=0;
     int i;
     for(i=0;stringRecibido[i]!='\0';i++)
     {
         if(stringRecibido[i]<'0' || stringRecibido[i]>'9')
         {
-            retorno=0;
+            retorno=-1;
             break;
         }
     }
@@ -33,13 +33,13 @@ int isValidNumber(char* stringRecibido)
 
 int isValidSignedNumber(char* stringRecibido)
 {
-    int retorno=1;  // para las funciones isValid arranco con verdadero y cambio cuando encuentro un error
+    int retorno=0;
     int i;
     for(i=0;stringRecibido[i]!='\0';i++)
     {
         if((stringRecibido[i]<'0' || stringRecibido[i]>'9') && (stringRecibido[0]!='+' && stringRecibido[0]!='-'))
         {
-            retorno=0;
+            retorno=-1;
             break;
         }
     }
@@ -48,13 +48,13 @@ int isValidSignedNumber(char* stringRecibido)
 
 int isValidFloatNumber(char* stringRecibido)
 {
-    int retorno=1;  // para las funciones isValid arranco con verdadero y cambio cuando encuentro un error
+    int retorno=0;
     int i;
     for(i=0;stringRecibido[i]!='\0';i++)
     {
         if((stringRecibido[i]<'0' || stringRecibido[i]>'9') && (stringRecibido[i]!='.'))
         {
-            retorno=0;
+            retorno=-1;
             break;
         }
     }
@@ -63,13 +63,13 @@ int isValidFloatNumber(char* stringRecibido)
 
 int isValidTelephone(char* stringRecibido)
 {
-    int retorno=1;  // para las funciones isValid arranco con verdadero y cambio cuando encuentro un error
+    int retorno=0;
     int i;
     for(i=0;stringRecibido[i]!='\0';i++)
     {
         if((stringRecibido[i]<'0' || stringRecibido[i]>'9') && (stringRecibido[i]!='-' || stringRecibido[i]!=' '))
         {
-            retorno=0;
+            retorno=-1;
             break;
         }
     }
@@ -78,13 +78,13 @@ int isValidTelephone(char* stringRecibido)
 
 int isValidDNI(char* stringRecibido)
 {
-    int retorno=1;  // para las funciones isValid arranco con verdadero y cambio cuando encuentro un error
+    int retorno=0;
     int i;
     for(i=0;stringRecibido[i]!='\0';i++)
     {
         if((stringRecibido[i]<'0' || stringRecibido[i]>'9') && (stringRecibido[i]!='.'))
         {
-            retorno=0;
+            retorno=-1;
             break;
         }
     }
@@ -93,7 +93,7 @@ int isValidDNI(char* stringRecibido)
 
 int isValidCUIT(char* stringRecibido)
 {
-    int retorno=1;  // para las funciones isValid arranco con verdadero y cambio cuando encuentro un error
+    int retorno=0;
     int i;
     int j;
     char buffer[14];
@@ -101,9 +101,9 @@ int isValidCUIT(char* stringRecibido)
 
     for(i=0;buffer[i]!='\0';i++)
     {
-        if((buffer[i]<'0' || buffer[i]>'9') && (buffer[i]!='-')) // chequeo que solo sean numeros o -
+        if((buffer[i]<'0' || buffer[i]>'9') && (buffer[i]!='-'))
         {
-            retorno=0;
+            retorno=-1;
             break;
         }
 
@@ -133,7 +133,7 @@ int isValidCUIT(char* stringRecibido)
 
 	if(buffer[11]!=verificador)
     {
-        retorno=0;
+        retorno=-1;
     }
 
     //if(stringRecibido[2]!='-' || stringRecibido[11]!='-' || stringRecibido[0]!='2' || stringRecibido[1]!='0' || stringRecibido[1]!='3' || stringRecibido[1]!='4' || stringRecibido[1]!='7')
@@ -142,14 +142,14 @@ int isValidCUIT(char* stringRecibido)
 
 int isValidEmail(char* stringRecibido)
 {
-    int retorno=1;  // para las funciones isValid arranco con verdadero y cambio cuando encuentro un error
+    int retorno=0;
     int i;
     for(i=0;stringRecibido[i]!='\0';i++)
     {
         if((stringRecibido[i]<'-' && stringRecibido[i]!='+') || (stringRecibido[i]>'9' && stringRecibido[i]<'@') ||
            (stringRecibido[i]>'Z' && stringRecibido[i]!='_' && stringRecibido[i]<'a')|| stringRecibido[i]>'z')
         {
-            retorno=0;
+            retorno=-1;
             break;
         }
     }
@@ -158,13 +158,13 @@ int isValidEmail(char* stringRecibido)
 
 int isValidTexto(char* stringRecibido)
 {
-    int retorno=1;  // para las funciones isValid arranco con verdadero y cambio cuando encuentro un error
+    int retorno=0;
     int i;
     for(i=0;stringRecibido[i]!='\0';i++)
     {
         if(stringRecibido[i]<' ' || stringRecibido[i]>'z')
         {
-            retorno=0;
+            retorno=-1;
             break;
         }
     }
@@ -173,13 +173,13 @@ int isValidTexto(char* stringRecibido)
 
 int isValidAlphanumeric(char* stringRecibido)
 {
-    int retorno=1;  // para las funciones isValid arranco con verdadero y cambio cuando encuentro un error
+    int retorno=0;
     int i;
     for(i=0;stringRecibido[i]!='\0';i++)
     {
         if(stringRecibido[i]<'0' || (stringRecibido[i]>'9' && stringRecibido[i]<'A') || (stringRecibido[i]>'Z' && stringRecibido[i]<'a') || stringRecibido[i]>'z' )
         {
-            retorno=0;
+            retorno=-1;
             break;
         }
     }
@@ -188,9 +188,9 @@ int isValidAlphanumeric(char* stringRecibido)
 
 int isValidChar(char charRecibido)
 {
-    int retorno=1;  // para las funciones isValid arranco con verdadero y cambio cuando encuentro un error
+    int retorno=0;
     if(charRecibido<'A' || (charRecibido>'Z' && charRecibido<'a') || charRecibido>'z')
-        retorno=0;
+        retorno=-1;
     return retorno;
 }
 
