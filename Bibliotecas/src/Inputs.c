@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdio_ext.h>
 #include <stdlib.h>
 #include <string.h>
 #include "Inputs.h"
@@ -29,6 +30,7 @@ int getString(char* msg, char* msgError, int min, int max, int* reintentos, char
         do
         {
             printf("%s",msg);
+            __fpurge(stdin);
             fgets(bufferStr,sizeof(bufferStr),stdin);
             bufferStr[strlen(bufferStr)-1]='\0';
 
@@ -77,33 +79,43 @@ int utn_getName(char* msg, char* msgError, int min, int max, int reintentos, cha
 
 
 //-----------------------------------------
-int utn_getUnsignedInt(  char* msg,char* msgError,int minSize,int maxSize,int min,int max,int reintentos,int* input)
+int utn_getInt(int *pResultado,char *pMensaje,char *pMensajeError,int minimo,int maximo,int reintentos)
 {
-    int retorno=-1;
-    char bufferStr[maxSize];
+	int retorno = -1;
+	int buffer;
+	char input[50];
+	int length;
+	do
+	{
+		printf("%s",pMensaje);
+		__fpurge(stdin);
+		fgets(input,sizeof(input),stdin);
+		length = strlen(input);
+		length--;
+		if(isValidNumber(input,length)==0)
+		{
+			buffer = atoi(input);
+			if(buffer >= minimo && buffer <= maximo)
+			{
+				*pResultado = buffer;
+				retorno = 0;
+				break;
+			}
+			else
+			{
+				printf("%s",pMensajeError);
+				reintentos--;
+			}
 
-    if(msg!=NULL && msgError!=NULL && minSize<maxSize && min<max && reintentos>=0 && input!=NULL)
-    {
-        do
-        {
-            if(!getString(msg,msgError,minSize,maxSize,&reintentos,bufferStr))
-            {
-                if(isValidNumber(bufferStr)==0)
-                {
-                    *input=atoi(bufferStr);
-                    retorno=0;
-                    break;
-                }
-                else
-                {
-                    printf("%s 2",msgError);
-                    reintentos--;
-                }
-            }
-        }
-        while(reintentos>=0);
-    }
-    return retorno;
+		}
+		else
+		{
+			printf("No es un numero");
+			reintentos--;
+		};
+
+	}while(reintentos >= 0);
+	return retorno;
 }
 
 
@@ -139,35 +151,44 @@ int utn_getSignedInt(char* msg, char* msgError, int minSize, int maxSize, int mi
 
 
 //*******************************************************
-int utn_getFloat(char* msg, char* msgError, int minSize, int maxSize, int min, int max, int reintentos, float* input)
+int utn_getFloat(float *pResultado,char *pMensaje,char *pMensajeError,int minimo,int maximo,int reintentos)
 {
-    int retorno=-1;
-    char bufferStr[maxSize];
+	int retorno = -1;
+	float buffer;
+	char input[50];
+	int length;
+	do
+	{
+		printf("%s",pMensaje);
+		__fpurge(stdin);
+		fgets(input,sizeof(input),stdin);
+		length = strlen(input);
+		length--;
+		if(isValidFloatNumber(input)==0)
+		{
+			buffer = atof(input);
+			if(buffer >= minimo && buffer <= maximo)
+			{
+				*pResultado = buffer;
+				retorno = 0;
+				break;
+			}
+			else
+			{
+				printf("%s",pMensajeError);
+				reintentos--;
+			}
 
-    if(msg!=NULL && msgError!=NULL && minSize<maxSize && min<max && reintentos>=0 && input!=NULL)
-    {
-        do
-        {
-            if(!getString(msg,msgError,minSize,maxSize,&reintentos,bufferStr))
-            {
-                if(isValidFloatNumber(bufferStr)==0)
-                {
-                    *input=atof(bufferStr);
-                    retorno=0;
-                    break;
-                }
-                else
-                {
-                    printf("%s 2",msgError);
-                    reintentos--;
-                }
-            }
-        }
-        while(reintentos>=0);
-    }
-    return retorno;
+		}
+		else
+		{
+			printf("No es un numero");
+			reintentos--;
+		};
+
+	}while(reintentos >= 0);
+	return retorno;
 }
-
 
 //*************************************************************
 int utn_getTelefono(char* msg, char* msgError, int minSize, int maxSize, int min, int max, int reintentos, char* input)

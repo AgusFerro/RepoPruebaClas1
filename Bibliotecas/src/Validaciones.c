@@ -16,18 +16,27 @@ int isValidName(char* stringRecibido)
     return retorno;
 }
 
-int isValidNumber(char* stringRecibido)
+int isValidNumber(char* stringRecibido,int limite)
 {
-    int retorno=0;
-    int i;
-    for(i=0;stringRecibido[i]!='\0';i++)
-    {
-        if(stringRecibido[i]<'0' || stringRecibido[i]>'9')
-        {
-            retorno=-1;
-            break;
-        }
-    }
+	int retorno = -1;
+		int i;
+		if(stringRecibido != NULL && limite > 0)
+		{
+			for(i=0;i<limite;i++)
+			{
+				if(stringRecibido[i]>='0' && stringRecibido[i]<='9')
+				{
+					retorno = 0;
+				}
+				else
+				{
+					retorno = -1;
+					break;
+				}
+			}
+
+		}
+
     return retorno;
 }
 

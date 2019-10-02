@@ -4,7 +4,7 @@
 #include <string.h>
 
 int isValidName(char* stringRecibido);
-int isValidNumber(char* stringRecibido);
+int isValidNumber(char* stringRecibido,int limite);
 int isValidSignedNumber(char* stringRecibido);
 int isValidFloatNumber(char* stringRecibido);
 int isValidTelephone(char* stringRecibido);

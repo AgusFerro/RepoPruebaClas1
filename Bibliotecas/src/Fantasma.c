@@ -8,11 +8,32 @@
 
 #include <string.h>
 #include <stdio.h>
+#include <stdio_ext.h>
 #include <stdlib.h>
 #include "Inputs.h"
 #include "Fantasma.h" //cambiar por nombre entidad
 
+void imprimeMenu()
+{
+	printf("\n1.Alta");
+	printf("\n2.Baja");
+	printf("\n3.Modificacion");
+	printf("\n4.Informar");
+	printf("\n5.Salir");
+	printf("\n");
 
+}
+
+void imprimeMenuModif()
+{
+	printf("\na.Nombre");
+	printf("\nb.Apellido");
+	printf("\nc.Sueldo");
+	printf("\nd.Sector");
+	printf("\ns.Salir");
+	printf("\n");
+
+}
 /** \brief  To indicate that all position in the array are empty,
 *          this function put the flag (isEmpty) in TRUE in all
 *          position of the array
@@ -170,8 +191,8 @@ int fantasma_alta(Fantasma array[], int size, int* contadorID)                  
         else
         {
         	array[posicion].isEmpty=0;
-            utn_getUnsignedInt("\ngetUnsignedInt: ","\nError",1,sizeof(int),1,10,1,&array[posicion].varInt);           //mensaje + cambiar campo varInt
-            utn_getFloat("\ngetFloat: ","\nError",1,sizeof(float),0,1,1,&array[posicion].varFloat);             //mensaje + cambiar campo varFloat
+            utn_getInt(&array[posicion].varInt,"\ngetInt: ","\nError",1,10,1);           //mensaje + cambiar campo varInt
+            utn_getFloat(&array[posicion].varFloat,"\ngetFloat: ","\nError",0,1,1);             //mensaje + cambiar campo varFloat
             utn_getName("\ngetName: ","\nError",1,TEXT_SIZE,1,array[posicion].varString);                      //mensaje + cambiar campo varString
             utn_getTexto("\ngetTexto: ","\nError",1,TEXT_SIZE,1,array[posicion].varLongString);                 //mensaje + cambiar campo varLongString
             (*contadorID)++;
@@ -199,7 +220,7 @@ int fantasma_baja(Fantasma array[], int sizeArray)                              
     int id;
     if(array!=NULL && sizeArray>0)
     {
-        utn_getUnsignedInt("\nID a cancelar: ","\nError",1,sizeof(int),1,sizeArray,1,&id);          //cambiar si no se busca por ID
+    	utn_getInt(&array[posicion].varInt,"\nID a dar de baja: ","\nError",1,10,1);          //cambiar si no se busca por ID
         if(fantasma_buscarID(array,sizeArray,id,&posicion)==-1)                                   //cambiar si no se busca por ID
         {
             printf("\nNo existe este ID");                                                          //cambiar si no se busca por ID
@@ -267,7 +288,7 @@ int fantasma_modificar(Fantasma array[], int sizeArray)                         
     char opcion;
     if(array!=NULL && sizeArray>0)
     {
-        utn_getUnsignedInt("\nID a modificar: ","\nError",1,sizeof(int),1,sizeArray,1,&id);         //cambiar si no se busca por ID
+    	utn_getInt(&array[posicion].varInt,"\nID a modificar: ","\nError",1,10,1);         //cambiar si no se busca por ID
         if(fantasma_buscarID(array,sizeArray,id,&posicion)==-1)                                   //cambiar si no se busca por ID
         {
             printf("\nNo existe este ID");                                                          //cambiar si no se busca por ID
@@ -282,10 +303,10 @@ int fantasma_modificar(Fantasma array[], int sizeArray)                         
                 switch(opcion)
                 {
                     case 'A':
-                        utn_getUnsignedInt("\n: ","\nError",1,sizeof(int),1,1,1,&array[posicion].varInt);           //mensaje + cambiar campo varInt
+                    	utn_getInt(&array[posicion].varInt,"\ngetInt: ","\nError",1,10,1);           //mensaje + cambiar campo varInt
                         break;
                     case 'B':
-                        utn_getFloat("\n: ","\nError",1,sizeof(float),0,1,1,&array[posicion].varFloat);             //mensaje + cambiar campo varFloat
+                        utn_getFloat(&array[posicion].varFloat,"\n: ","\nError",0,1,1);             //mensaje + cambiar campo varFloat
                         break;
                     case 'C':
                         utn_getName("\n: ","\nError",1,TEXT_SIZE,1,array[posicion].varString);                      //mensaje + cambiar campo varString

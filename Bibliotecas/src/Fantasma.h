@@ -9,6 +9,7 @@
 #define FANTASMA_H_
 
 #define TEXT_SIZE 20
+#define CANT_EMP 100
 
 typedef struct
 {
@@ -23,6 +24,9 @@ typedef struct
 
 }Fantasma;
 
+int abmFantasma(void);
+void imprimeMenu();
+void imprimeMenuModif();
 int fantasma_Inicializar(Fantasma array[], int size);                                    //cambiar fantasma
 int fantasma_buscarEmpty(Fantasma array[], int size, int* posicion);                    //cambiar fantasma
 int fantasma_buscarID(Fantasma array[], int size, int valorBuscado, int* posicion);                    //cambiar fantasma
