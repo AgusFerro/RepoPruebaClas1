@@ -1,12 +1,25 @@
-22:13:25 **** Incremental Build of configuration Debug for project Clase_08 ****
+21:56:32 **** Incremental Build of configuration Debug for project PreParcial ****
 make all 
-Building file: ../src/Clase_08.c
+Building file: ../src/PreParcial.c
 Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Clase_08.d" -MT"src/Clase_08.o" -o "src/Clase_08.o" "../src/Clase_08.c"
-Finished building: ../src/Clase_08.c
- 
-Building target: Clase_08
-Invoking: GCC C Linker
-gcc  -o "Clase_08"  ./src/Clase_08.o ./src/UTN_Array.o ./src/UTN_Inputs.o ./src/UTN_Validaciones.o   
-Finished building target: Clase_08
- 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/PreParcial.d" -MT"src/PreParcial.o" -o "src/PreParcial.o" "../src/PreParcial.c"
+../src/PreParcial.c: In function ‘abmFantasma’:
+../src/PreParcial.c:31:5: warning: implicit declaration of function ‘pantalla_alta’ [-Wimplicit-function-declaration]
+     pantalla_alta(listaPantalla,CANT_EMP,&ID);
+     ^~~~~~~~~~~~~
+../src/PreParcial.c:44:6: warning: implicit declaration of function ‘fantasma_modificar’ [-Wimplicit-function-declaration]
+      fantasma_modificar(listaFantasma, CANT_EMP);
+      ^~~~~~~~~~~~~~~~~~
+src/subdir.mk:30: fallo en las instrucciones para el objetivo 'src/PreParcial.o'
+../src/PreParcial.c:44:25: error: ‘listaFantasma’ undeclared (first use in this function)
+      fantasma_modificar(listaFantasma, CANT_EMP);
+                         ^~~~~~~~~~~~~
+../src/PreParcial.c:44:25: note: each undeclared identifier is reported only once for each function it appears in
+../src/PreParcial.c:58:6: warning: implicit declaration of function ‘fantasma_baja’ [-Wimplicit-function-declaration]
+      fantasma_baja(listaFantasma,CANT_EMP);
+      ^~~~~~~~~~~~~
+../src/PreParcial.c:79:7: warning: implicit declaration of function ‘fantasma_listar’ [-Wimplicit-function-declaration]
+       fantasma_listar(listaFantasma, CANT_EMP);
+       ^~~~~~~~~~~~~~~
+make: *** [src/PreParcial.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.

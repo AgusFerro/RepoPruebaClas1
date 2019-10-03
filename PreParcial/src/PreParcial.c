@@ -2,7 +2,8 @@
 #include <stdio_ext.h>
 #include <stdlib.h>
 #include "Inputs.h"
-#include "Fantasma.h"
+#include "Pantalla.h"
+#include "Publicidad.h"
 
 int main(void)
 {
@@ -15,8 +16,10 @@ int abmFantasma(void)
 	int opcion,opcionListar;
 	int reintentos = 3;
 	int ID = 0, flag1 = 0;
-	Fantasma listaFantasma[CANT_EMP];
-	fantasma_Inicializar(listaFantasma,CANT_EMP);
+	Pantalla listaPantalla[CANT_EMP];
+	Publicidad listaPublicidad[CANT_EMP];
+	pantalla_Inicializar(listaPantalla,CANT_EMP);
+	publicidad_Inicializar(listaPublicidad,CANT_EMP);
 	imprimeMenu();
 	do
 	{
@@ -25,7 +28,7 @@ int abmFantasma(void)
 		switch(opcion)
 		{
 			case 1:
-				fantasma_alta(listaFantasma,CANT_EMP,&ID);
+				pantalla_alta(listaPantalla,CANT_EMP,&ID);
 				flag1++;
 				imprimeMenu();
 				break;
@@ -38,9 +41,8 @@ int abmFantasma(void)
 				}
 				else
 				{
-					fantasma_baja(listaFantasma, CANT_EMP);
+					fantasma_modificar(listaFantasma, CANT_EMP);
 					printf("\nBaja correcta");
-					flag1--;
 					imprimeMenu();
 				}
 				break;
@@ -53,8 +55,9 @@ int abmFantasma(void)
 				}
 				else
 				{
-				fantasma_baja(listaFantasma,CANT_EMP);
-				imprimeMenu();
+					fantasma_baja(listaFantasma,CANT_EMP);
+					flag1--;
+					imprimeMenu();
 				}
 				break;
 

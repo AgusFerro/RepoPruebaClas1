@@ -220,7 +220,7 @@ int fantasma_baja(Fantasma array[], int sizeArray)                              
     int id;
     if(array!=NULL && sizeArray>0)
     {
-    	utn_getInt(&array[posicion].varInt,"\nID a dar de baja: ","\nError",1,10,1);          //cambiar si no se busca por ID
+    	utn_getInt(&id,"\nID a dar de baja: ","\nError",1,10,1);          //cambiar si no se busca por ID
         if(fantasma_buscarID(array,sizeArray,id,&posicion)==-1)                                   //cambiar si no se busca por ID
         {
             printf("\nNo existe este ID");                                                          //cambiar si no se busca por ID
@@ -288,7 +288,7 @@ int fantasma_modificar(Fantasma array[], int sizeArray)                         
     char opcion;
     if(array!=NULL && sizeArray>0)
     {
-    	utn_getInt(&array[posicion].varInt,"\nID a modificar: ","\nError",1,10,1);         //cambiar si no se busca por ID
+    	utn_getInt(&id,"\nID a modificar: ","\nError",1,10,1);         //cambiar si no se busca por ID
         if(fantasma_buscarID(array,sizeArray,id,&posicion)==-1)                                   //cambiar si no se busca por ID
         {
             printf("\nNo existe este ID");                                                          //cambiar si no se busca por ID
