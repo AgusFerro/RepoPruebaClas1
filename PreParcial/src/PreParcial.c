@@ -103,6 +103,16 @@ int abmFantasma(void)
 				break;
 
 			case 7:
+				if(flag1<1 || flag2<1)
+				{
+					printf("\nNo hay datos cargados");
+					imprimeMenu();
+				}
+				else
+				{
+					consultar_facturacion (listaPantalla,listaPublicidad,CANT_EMP,CANT_EMP);
+					imprimeMenu();
+				}
 				break;
 
 			case 8:

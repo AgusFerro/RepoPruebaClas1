@@ -217,20 +217,23 @@ int consultar_facturacion (Pantalla pantArray[],Publicidad publiArray[], int siz
 {
     int retorno=-1;
     int posicion;
-    int id;
+    float precio;
     char cuit[14];
 
     if(pantArray!=NULL && sizePantArray>0)
     {
-    	utn_getCUIT("Ingrese CUIT de Cliente","Error",2,cuit);
+    	utn_getCUIT("\nIngrese CUIT de Cliente","Error",2,cuit);
+    	printf("\n_Cuil de cliente: %s",cuit);
     	for(int i=0;i<sizePubliArray;i++)
     	{
     		if(publiArray[i].isEmpty==0 && strcmp(publiArray[i].cuilCliente,cuit)==0)
     		{
-    			pantalla_buscarID(Pantalla array[], int size, int valorBuscado, int* posicion)
+    			pantalla_buscarID(pantArray,sizePantArray,publiArray[i].idPublicidad,&posicion);
+    			precio = publiArray[i].cantDias * pantArray[posicion].precioPorDia;
+    			printf("\n_ID Pantalla: %d _Precio Total: %f",pantArray[posicion].idPantalla,precio);
     		}
     	}
-
+    	retorno = 0;
 
     }
     return retorno;
