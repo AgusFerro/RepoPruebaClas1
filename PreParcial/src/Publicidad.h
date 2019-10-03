@@ -22,9 +22,9 @@ int publicidad_buscarID(Publicidad array[], int size, int valorBuscado, int* pos
 
 int publicidad_alta(Publicidad array[], int size, int contadorID);
 
-int publicidad_baja(Publicidad array[], int sizeArray,int contadorID);
+int publicidad_baja(Publicidad array[], int sizeArray, int contadorID);
 
-int publicidad_modificar(Publicidad array[], int sizeArray);
+int publicidad_modificar(Publicidad array[], int sizeArray, int contadorID);
 
 int publicidad_listar(Publicidad array[], int size);
 

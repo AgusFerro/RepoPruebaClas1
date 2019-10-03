@@ -1,31 +1,51 @@
-13:39:36 **** Incremental Build of configuration Debug for project PreParcial ****
+17:41:52 **** Incremental Build of configuration Debug for project PreParcial ****
 make all 
-Building file: ../src/Pantalla.c
+Building file: ../src/Publicidad.c
 Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Pantalla.d" -MT"src/Pantalla.o" -o "src/Pantalla.o" "../src/Pantalla.c"
-Finished building: ../src/Pantalla.c
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Publicidad.d" -MT"src/Publicidad.o" -o "src/Publicidad.o" "../src/Publicidad.c"
+../src/Publicidad.c: In function ‘publicidad_alta’:
+../src/Publicidad.c:81:20: warning: format ‘%f’ expects argument of type ‘double’, but argument 5 has type ‘char *’ [-Wformat=]
+             printf("\n Posicion: %d"
+                    ^~~~~~~~~~~~~~~~~
+../src/Publicidad.c:91:8:
+        array[posicion].nombrePublicidad,
+        ~~~~~        
+../src/Publicidad.c:84:36: note: format string is defined here
+               "\n Precio por dia: %f"
+                                   ~^
+                                   %s
+../src/Publicidad.c:81:20: warning: format ‘%s’ expects a matching ‘char *’ argument [-Wformat=]
+             printf("\n Posicion: %d"
+                    ^~~~~~~~~~~~~~~~~
+../src/Publicidad.c:86:27: note: format string is defined here
+               "\n Calle: %s"
+                          ~^
+../src/Publicidad.c:81:20: warning: format ‘%d’ expects a matching ‘int’ argument [-Wformat=]
+             printf("\n Posicion: %d"
+                    ^~~~~~~~~~~~~~~~~
+../src/Publicidad.c:87:28: note: format string is defined here
+               "\n Altura: %d",
+                           ~^
+../src/Publicidad.c: In function ‘publicidad_baja’:
+../src/Publicidad.c:127:33: warning: passing argument 1 of ‘pantalla_buscarID’ from incompatible pointer type [-Wincompatible-pointer-types]
+            if(pantalla_buscarID(array,sizeArray,id,&posicion)==-1)
+                                 ^~~~~
+In file included from ../src/Publicidad.c:7:0:
+../src/Pantalla.h:41:5: note: expected ‘Pantalla * {aka struct <anonymous> *}’ but argument is of type ‘Publicidad * {aka struct <anonymous> *}’
+ int pantalla_buscarID(Pantalla array[], int size, int valorBuscado, int* posicion);
+     ^~~~~~~~~~~~~~~~~
+../src/Publicidad.c: In function ‘publicidad_modificar’:
+../src/Publicidad.c:173:28: warning: passing argument 1 of ‘pantalla_buscarID’ from incompatible pointer type [-Wincompatible-pointer-types]
+       if(pantalla_buscarID(array,sizeArray,id,&posicion)==-1)
+                            ^~~~~
+In file included from ../src/Publicidad.c:7:0:
+../src/Pantalla.h:41:5: note: expected ‘Pantalla * {aka struct <anonymous> *}’ but argument is of type ‘Publicidad * {aka struct <anonymous> *}’
+ int pantalla_buscarID(Pantalla array[], int size, int valorBuscado, int* posicion);
+     ^~~~~~~~~~~~~~~~~
+Finished building: ../src/Publicidad.c
  
-Building file: ../src/PreParcial.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/PreParcial.d" -MT"src/PreParcial.o" -o "src/PreParcial.o" "../src/PreParcial.c"
-In file included from ../src/PreParcial.c:5:0:
-../src/PreParcial.c: In function ‘abmFantasma’:
-../src/Pantalla.h:13:18: warning: passing argument 2 of ‘pantalla_baja’ makes pointer from integer without a cast [-Wint-conversion]
- #define CANT_EMP 100
-                  ^
-../src/PreParcial.c:64:34: note: in expansion of macro ‘CANT_EMP’
-      pantalla_baja(listaPantalla,CANT_EMP);
-                                  ^~~~~~~~
-src/subdir.mk:30: recipe for target 'src/PreParcial.o' failed
-../src/Pantalla.h:45:5: note: expected ‘Publicidad * {aka struct <anonymous> *}’ but argument is of type ‘int’
- int pantalla_baja(Pantalla pantArray[],Publicidad publiArrary[], int sizeArray);
-     ^~~~~~~~~~~~~
-../src/PreParcial.c:64:6: error: too few arguments to function ‘pantalla_baja’
-      pantalla_baja(listaPantalla,CANT_EMP);
-      ^~~~~~~~~~~~~
-In file included from ../src/PreParcial.c:5:0:
-../src/Pantalla.h:45:5: note: declared here
- int pantalla_baja(Pantalla pantArray[],Publicidad publiArrary[], int sizeArray);
-     ^~~~~~~~~~~~~
-make: *** [src/PreParcial.o] Error 1
-"make all" terminated with exit code 2. Build might be incomplete.
+Building target: PreParcial
+Invoking: GCC C Linker
+gcc  -o "PreParcial"  ./src/Inputs.o ./src/Pantalla.o ./src/PreParcial.o ./src/Publicidad.o ./src/Validaciones.o   
+Finished building target: PreParcial
+ 

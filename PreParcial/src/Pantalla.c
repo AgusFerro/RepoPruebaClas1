@@ -128,15 +128,15 @@ int pantalla_alta(Pantalla array[], int size, int* contadorID)
 
 //*****************************************
 
-int pantalla_baja(Pantalla pantArray[],Publicidad publiArray[], int sizeArray)
+int pantalla_baja(Pantalla pantArray[],Publicidad publiArray[], int sizePantArray, int sizePubliArray)
 {
     int retorno=-1;
     int posicion;
     int id;
-    if(pantArray!=NULL && sizeArray>0 && publiArray!=NULL)
+    if(pantArray!=NULL && sizePantArray>0 && publiArray!=NULL && sizePubliArray>0)
     {
     	utn_getInt(&id,"\nID de pantalla a dar de baja: ","\nError",1,10,1);
-        if(pantalla_buscarID(pantArray,sizeArray,id,&posicion)==-1)
+        if(pantalla_buscarID(pantArray,sizePantArray,id,&posicion)==-1)
         {
             printf("\nNo existe este ID");
         }
@@ -153,7 +153,7 @@ int pantalla_baja(Pantalla pantArray[],Publicidad publiArray[], int sizeArray)
         posicion = 0;
         for(int i=0;i<CANT_EMP;i++)
         {
-        	if(publicidad_buscarID(publiArray,sizeArray,id,&posicion)==-1)
+        	if(publicidad_buscarID(publiArray,sizePubliArray,id,&posicion)==-1)
         	{
         	   printf("\nNo existe publicidad para dar de baja en esta pantalla");
         	}

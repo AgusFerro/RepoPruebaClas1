@@ -42,7 +42,7 @@ int pantalla_buscarID(Pantalla array[], int size, int valorBuscado, int* posicio
 
 int pantalla_alta(Pantalla array[], int size, int* contadorID);
 
-int pantalla_baja(Pantalla pantArray[],Publicidad publiArrary[], int sizeArray);
+int pantalla_baja(Pantalla pantArray[],Publicidad publiArrary[], int sizePantArray, int sizePubliArray);
 
 int pantalla_modificar(Pantalla array[], int sizeArray);
 

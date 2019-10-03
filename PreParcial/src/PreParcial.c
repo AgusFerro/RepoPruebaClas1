@@ -61,18 +61,26 @@ int abmFantasma(void)
 				}
 				else
 				{
-					pantalla_baja(listaPantalla,CANT_EMP);
+					pantalla_baja(listaPantalla,listaPublicidad,CANT_EMP,CANT_EMP);
 					flag1--;
-
-
-						publicidad_buscarID(listaPublicidad,CANT_EMP);
-						flag1--;
-						imprimeMenu();
-
-
+					imprimeMenu();
 				}
 				break;
 			case 4:
+				if(flag1<1)
+				{
+					printf("\nNo hay datos cargados");
+					imprimeMenu();
+				}
+				else
+				{
+					pantalla_listar(listaPantalla,CANT_EMP);
+					publicidad_alta(listaPublicidad,CANT_EMP,ID);
+					imprimeMenu();
+				}
+				break;
+			case 5:
+
 				break;
 			case 8:
 				if(flag1<1)
@@ -97,7 +105,7 @@ int abmFantasma(void)
 				imprimeMenu();
 				break;
 
-			case 5:
+			case 9:
 				printf("Hasta pronto!");
 				break;
 			default:
@@ -107,7 +115,7 @@ int abmFantasma(void)
 				break;
 			}
 
-		}while(opcion != 5 && reintentos > 1);
+		}while(opcion != 9 && reintentos > 1);
 		if(reintentos <= 1)
 		{
 			printf("Cantidad de reintentos agotada\n");

@@ -65,7 +65,7 @@ int publicidad_alta(Publicidad array[], int size, int contadorID)
 {
     int retorno=-1;
     int posicion;
-    if(array!=NULL && size>0 && contadorID!=NULL)
+    if(array!=NULL && size>0 && contadorID>0)
     {
         if(publicidad_buscarEmpty(array,size,&posicion)==-1)
         {
@@ -75,7 +75,7 @@ int publicidad_alta(Publicidad array[], int size, int contadorID)
         {
         	array[posicion].isEmpty=0;
             utn_getInt(&array[posicion].idPublicidad,"\n:Elija una pantalla: ","\nNo existe la pantalla",1,contadorID,2);
-            utn_getInt(&array[posicion].cantDias,"\n:Ingrese cantidad de dias: ","\nError",1,365,2);
+            utn_getInt(&array[posicion].cantDias,"\n:Ingrese cantidad de dias(hasta 365): ","\nError",1,365,2);
             utn_getName("\nIngrese nombre de Publicidad ","\nError",1,TEXT_SIZE,2,array[posicion].nombrePublicidad);
             utn_getCUIT("\nIngrese Cuil: XX-XXXXXXXX-X","\nError",2,array[posicion].cuilCliente);
             printf("\n Posicion: %d"
@@ -103,54 +103,89 @@ int publicidad_baja(Publicidad array[], int sizeArray,int contadorID)
     int retorno=-1;
     int posicion;
     int id;
+    int flag = 0;
+    char cuit[14];
     if(array!=NULL && sizeArray>0)
     {
-    	utn_getInt(&id,"\nID de publicidad a dar de baja: ","\nError",1,contadorID,1);
-        if(publicidad_buscarID(array,sizeArray,id,&posicion)==-1)
-        {
-            printf("\nNo existe este ID");
-        }
-        else
-        {
-            array[posicion].isEmpty=1;
-            array[posicion].idPublicidad=0;
-            array[posicion].cantDias=0;
-            strcpy(array[posicion].cuilCliente,"");
-            strcpy(array[posicion].nombrePublicidad,"");
-            retorno=0;
-        }
+    	utn_getCUIT("Ingrese CUIT de Cliente","Error",2,cuit);
+    	for(int i=0;i<sizeArray;i++)
+    	{
+    	    if(array[i].isEmpty==0 && strcmp(array[i].cuilCliente,cuit)==0)
+    	    {
+    	    	printf("\n Posicion: %d"
+    	  		       "\n ID: %d"
+      			       "\n Cantidad de dias: %d",
+  	    			       posicion,
+    	    		       array[posicion].idPublicidad,
+    	    		       array[posicion].cantDias);
+    	    			   flag++;
+    	    		}
+    	    	}
+    	    	if(flag>0)
+    	    	{
+    	    		utn_getInt(&id,"\nID de pantalla a dar de baja: ","\nError",1,contadorID,2);
+    	    		if(pantalla_buscarID(array,sizeArray,id,&posicion)==-1)
+    	    		{
+    	    			printf("\nNo existe este ID");
+    	    		}
+    	    		else
+    	    		{
+    	    			array[posicion].isEmpty=1;
+    	    			array[posicion].idPublicidad=0;
+    	    			array[posicion].cantDias=0;
+    	    			strcpy(array[posicion].nombrePublicidad,"");
+    	    			strcpy(array[posicion].cuilCliente,"");
+    	            	retorno=0;
+    	    		}
+    	    	}
     }
     return retorno;
 }
 
 
-int publicidad_modificar(Publicidad array[], int sizeArray)
+int publicidad_modificar(Publicidad array[], int sizeArray, int contadorID)
 {
     int retorno=-1;
     int posicion;
     int id;
-    int opcion;
+    int flag=0;
+    char cuit[14];
+
     if(array!=NULL && sizeArray>0)
     {
-    	utn_getInt(&id,"\nID de pantalla a modificar: ","\nError",1,CANT_EMP,2);
-        if(pantalla_buscarID(array,sizeArray,id,&posicion)==-1)
-        {
-            printf("\nNo existe este ID");
-        }
-        else
-        {
-            do
-            {
-            	printf("\n Posicion: %d"
-            	       "\n ID: %d"
-            	       "\n Cantidad de dias: %d",
-            	        posicion,
-            			array[posicion].idPublicidad,
-            			array[posicion].cantDias);
-
-            }while(opcion!='S');
-            retorno=0;
-        }
+    	utn_getCUIT("Ingrese CUIT de Cliente","Error",2,cuit);
+    	for(int i=0;i<sizeArray;i++)
+    	{
+    		if(array[i].isEmpty==0 && strcmp(array[i].cuilCliente,cuit)==0)
+    		{
+    			printf("\n Posicion: %d"
+    			       "\n ID: %d"
+    			       "\n Cantidad de dias: %d",
+    			       posicion,
+    			       array[posicion].idPublicidad,
+    			       array[posicion].cantDias);
+    					flag++;
+    		}
+    	}
+    	if(flag>0)
+    	{
+    		utn_getInt(&id,"\nID de pantalla a modificar: ","\nError",1,contadorID,2);
+    		if(pantalla_buscarID(array,sizeArray,id,&posicion)==-1)
+    		{
+    			printf("\nNo existe este ID");
+    		}
+    		else
+    		{
+    			printf("\n Posicion: %d"
+    					"\n ID: %d"
+    					"\n Cantidad de dias: %d",
+						posicion,
+						array[posicion].idPublicidad,
+						array[posicion].cantDias);
+            			utn_getInt(&array[posicion].cantDias,"\n:Ingrese cantidad de dias: (hasta 365) ","\nError",1,365,2);
+            			retorno=0;
+    		}
+    	}
     }
     return retorno;
 }
