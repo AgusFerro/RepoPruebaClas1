@@ -55,11 +55,11 @@ int isValidSignedNumber(char* stringRecibido)
     return retorno;
 }
 
-int isValidFloatNumber(char* stringRecibido)
+int isValidFloatNumber(char* stringRecibido, int limite)
 {
     int retorno=0;
     int i;
-    for(i=0;stringRecibido[i]!='\0';i++)
+    for(i=0;i<limite;i++)
     {
         if((stringRecibido[i]<'0' || stringRecibido[i]>'9') && (stringRecibido[i]!='.'))
         {
@@ -109,10 +109,7 @@ int isValidCUIT(char* stringRecibido)
 
     for(i=0;buffer[i]!='\0';i++)
     {
-    	printf(buffer[i]);
-    	printf(i);
-
-        if(!(buffer[i]=='-' &&(i == 2 || i == 11)))
+        if(buffer[i]=='-' && (i != 2 && i != 11))
         {
         	retorno=-1;
         	break;
@@ -130,7 +127,8 @@ int isValidCUIT(char* stringRecibido)
         	break;
 		}
     }
-
+    printf("%d",i);
+    printf("%d",retorno);
     return retorno;
 }
 

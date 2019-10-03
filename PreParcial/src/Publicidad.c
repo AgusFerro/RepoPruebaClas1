@@ -78,13 +78,7 @@ int publicidad_alta(Publicidad array[], int size, int contadorID)
             utn_getInt(&array[posicion].cantDias,"\n:Ingrese cantidad de dias(hasta 365): ","\nError",1,365,2);
             utn_getName("\nIngrese nombre de Publicidad ","\nError",1,TEXT_SIZE,2,array[posicion].nombrePublicidad);
             utn_getCUIT("\nIngrese Cuil: XX-XXXXXXXX-X","\nError",2,array[posicion].cuilCliente);
-            printf("\n Posicion: %d"
-            		"\n ID: %d"
-            		"\n Tipo: %d"
-            		"\n Precio por dia: %f"
-            		"\n Nombre: %s"
-            		"\n Calle: %s"
-            		"\n Altura: %d",
+            printf("\n _Posicion: %d _ID: %d _Cantidad de dias %d _Nombre publicidad %s _Cuil %s",
                    posicion,
 				   array[posicion].idPublicidad,
 				   array[posicion].cantDias,
@@ -218,4 +212,29 @@ int publicidad_listar(Publicidad array[], int size)
     }
     return retorno;
 }
+
+int consultar_facturacion (Pantalla pantArray[],Publicidad publiArray[], int sizePantArray, int sizePubliArray)
+{
+    int retorno=-1;
+    int posicion;
+    int id;
+    char cuit[14];
+
+    if(pantArray!=NULL && sizePantArray>0)
+    {
+    	utn_getCUIT("Ingrese CUIT de Cliente","Error",2,cuit);
+    	for(int i=0;i<sizePubliArray;i++)
+    	{
+    		if(publiArray[i].isEmpty==0 && strcmp(publiArray[i].cuilCliente,cuit)==0)
+    		{
+    			pantalla_buscarID(Pantalla array[], int size, int valorBuscado, int* posicion)
+    		}
+    	}
+
+
+    }
+    return retorno;
+}
+
+//*****************************************
 

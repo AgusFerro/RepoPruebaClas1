@@ -9,11 +9,17 @@
 
 void imprimeMenu()
 {
-	printf("\n1.Alta");
-	printf("\n2.Baja");
-	printf("\n3.Modificacion");
-	printf("\n4.Informar");
-	printf("\n5.Salir");
+	printf("\n1.Alta de pantalla");
+	printf("\n2.Modificacion de Pantalla");
+	printf("\n3.Baja de Pantalla");
+	printf("\n4.Contratar publicidad");
+	printf("\n5.Modificar publicidad");
+	printf("\n6.Cancelar publicidad");
+	printf("\n7.Consultar facturacion");
+	printf("\n8.Listar contrataciones");
+	printf("\n9.Listar pantallas");
+	printf("\n10.Informes");
+	printf("\n11.Salir");
 	printf("\n");
 
 }
@@ -99,7 +105,7 @@ int pantalla_alta(Pantalla array[], int size, int* contadorID)
         else
         {
         	array[posicion].isEmpty=0;
-            utn_getInt(&array[posicion].tipo,"\n:Elija un tipo 1-Led/2-LCD: ","\nError",1,2,2);
+            utn_getInt(&array[posicion].tipo,"\nElija un tipo 1-Led/2-LCD: ","\nError",1,2,2);
             utn_getFloat(&array[posicion].precioPorDia,"\nPrecio por dia: ","\nError",100,2000,2);
             utn_getName("\nIngrese nombre de Pantalla: ","\nError",1,TEXT_SIZE,2,array[posicion].nombre);
             utn_getName("\nIngrese calle: ","\nError",1,TEXT_SIZE,2,array[posicion].direccion.calle);
@@ -133,6 +139,7 @@ int pantalla_baja(Pantalla pantArray[],Publicidad publiArray[], int sizePantArra
     int retorno=-1;
     int posicion;
     int id;
+    int flag1 = 0, flag2 = 0;
     if(pantArray!=NULL && sizePantArray>0 && publiArray!=NULL && sizePubliArray>0)
     {
     	utn_getInt(&id,"\nID de pantalla a dar de baja: ","\nError",1,10,1);
@@ -155,7 +162,7 @@ int pantalla_baja(Pantalla pantArray[],Publicidad publiArray[], int sizePantArra
         {
         	if(publicidad_buscarID(publiArray,sizePubliArray,id,&posicion)==-1)
         	{
-        	   printf("\nNo existe publicidad para dar de baja en esta pantalla");
+        	   flag1++;
         	}
         	else
         	{
@@ -164,8 +171,17 @@ int pantalla_baja(Pantalla pantArray[],Publicidad publiArray[], int sizePantArra
         	   	publiArray[posicion].cantDias=0;
         	    strcpy(publiArray[posicion].cuilCliente,"");
         	    strcpy(publiArray[posicion].nombrePublicidad,"");
+        	    flag2++;
         	}
 
+        }
+        if(flag1<1)
+        {
+        	printf("\nNo existe publicidad para dar de baja en esta pantalla");
+        }
+        else
+        {
+        	printf("\nSe dieron de baja %d publicidades",flag2);
         }
         retorno=0;
     }
@@ -182,6 +198,7 @@ int pantalla_modificar(Pantalla array[], int sizeArray)
     char opcion;
     if(array!=NULL && sizeArray>0)
     {
+    	pantalla_listar(array,sizeArray);
     	utn_getInt(&id,"\nID de pantalla a modificar: ","\nError",1,CANT_EMP,2);
         if(pantalla_buscarID(array,sizeArray,id,&posicion)==-1)
         {
@@ -209,10 +226,10 @@ int pantalla_modificar(Pantalla array[], int sizeArray)
                 switch(opcion)
                 {
                     case 'A':
-                    	utn_getInt(&array[posicion].tipo,"\n:Elija un tipo 1-Led/2-LCD: ","\nError",1,2,1);
+                    	utn_getInt(&array[posicion].tipo,"\nElija un tipo 1-Led/2-LCD: ","\nError",1,2,1);
                         break;
                     case 'B':
-                        utn_getFloat(&array[posicion].precioPorDia,"\n:Precio por dia: ","\nError",100,2000,1);
+                        utn_getFloat(&array[posicion].precioPorDia,"\nPrecio por dia: ","\nError",100,2000,1);
                         break;
                     case 'C':
                         utn_getName("\nNombre: ","\nError",1,TEXT_SIZE,1,array[posicion].nombre);
@@ -248,13 +265,7 @@ int pantalla_listar(Pantalla array[], int size)
             if(array[i].isEmpty==1)
                 continue;
             else
-            	printf("\n Posicion: %d"
-            	       "\n ID: %d"
-            	       "\n Tipo: %d"
-            	       "\n Precio por dia: %f"
-            	       "\n Nombre: %s"
-            	       "\n Calle: %s"
-            	       "\n Altura: %d",
+            	printf("\n _Posicion: %d _ID: %d _Tipo: %d _ Precio por dia: %f _ Nombre: %s _Calle: %s _Altura: %d",
             	       i,
             	       array[i].idPantalla,
             	       array[i].tipo,

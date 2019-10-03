@@ -164,7 +164,7 @@ int utn_getFloat(float *pResultado,char *pMensaje,char *pMensajeError,int minimo
 		fgets(input,sizeof(input),stdin);
 		length = strlen(input);
 		length--;
-		if(isValidFloatNumber(input)==0)
+		if(isValidFloatNumber(input,length)==0)
 		{
 			buffer = atof(input);
 			if(buffer >= minimo && buffer <= maximo)

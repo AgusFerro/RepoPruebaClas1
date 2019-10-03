@@ -1,51 +1,6 @@
-17:41:52 **** Incremental Build of configuration Debug for project PreParcial ****
+19:58:19 **** Incremental Build of configuration Debug for project PreParcial ****
 make all 
-Building file: ../src/Publicidad.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Publicidad.d" -MT"src/Publicidad.o" -o "src/Publicidad.o" "../src/Publicidad.c"
-../src/Publicidad.c: In function ‘publicidad_alta’:
-../src/Publicidad.c:81:20: warning: format ‘%f’ expects argument of type ‘double’, but argument 5 has type ‘char *’ [-Wformat=]
-             printf("\n Posicion: %d"
-                    ^~~~~~~~~~~~~~~~~
-../src/Publicidad.c:91:8:
-        array[posicion].nombrePublicidad,
-        ~~~~~        
-../src/Publicidad.c:84:36: note: format string is defined here
-               "\n Precio por dia: %f"
-                                   ~^
-                                   %s
-../src/Publicidad.c:81:20: warning: format ‘%s’ expects a matching ‘char *’ argument [-Wformat=]
-             printf("\n Posicion: %d"
-                    ^~~~~~~~~~~~~~~~~
-../src/Publicidad.c:86:27: note: format string is defined here
-               "\n Calle: %s"
-                          ~^
-../src/Publicidad.c:81:20: warning: format ‘%d’ expects a matching ‘int’ argument [-Wformat=]
-             printf("\n Posicion: %d"
-                    ^~~~~~~~~~~~~~~~~
-../src/Publicidad.c:87:28: note: format string is defined here
-               "\n Altura: %d",
-                           ~^
-../src/Publicidad.c: In function ‘publicidad_baja’:
-../src/Publicidad.c:127:33: warning: passing argument 1 of ‘pantalla_buscarID’ from incompatible pointer type [-Wincompatible-pointer-types]
-            if(pantalla_buscarID(array,sizeArray,id,&posicion)==-1)
-                                 ^~~~~
-In file included from ../src/Publicidad.c:7:0:
-../src/Pantalla.h:41:5: note: expected ‘Pantalla * {aka struct <anonymous> *}’ but argument is of type ‘Publicidad * {aka struct <anonymous> *}’
- int pantalla_buscarID(Pantalla array[], int size, int valorBuscado, int* posicion);
-     ^~~~~~~~~~~~~~~~~
-../src/Publicidad.c: In function ‘publicidad_modificar’:
-../src/Publicidad.c:173:28: warning: passing argument 1 of ‘pantalla_buscarID’ from incompatible pointer type [-Wincompatible-pointer-types]
-       if(pantalla_buscarID(array,sizeArray,id,&posicion)==-1)
-                            ^~~~~
-In file included from ../src/Publicidad.c:7:0:
-../src/Pantalla.h:41:5: note: expected ‘Pantalla * {aka struct <anonymous> *}’ but argument is of type ‘Publicidad * {aka struct <anonymous> *}’
- int pantalla_buscarID(Pantalla array[], int size, int valorBuscado, int* posicion);
-     ^~~~~~~~~~~~~~~~~
-Finished building: ../src/Publicidad.c
- 
-Building target: PreParcial
-Invoking: GCC C Linker
-gcc  -o "PreParcial"  ./src/Inputs.o ./src/Pantalla.o ./src/PreParcial.o ./src/Publicidad.o ./src/Validaciones.o   
-Finished building target: PreParcial
- 
+make: No se hace nada para 'all'.
+19:58:24 **** Incremental Build of configuration Debug for project PreParcial ****
+make all 
+make: No se hace nada para 'all'.

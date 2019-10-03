@@ -13,12 +13,9 @@ int main(void)
 
 int abmFantasma(void)
 {
-	int opcion,opcionListar;
+	int opcion;
 	int reintentos = 3;
-	int ID = 0, flag1 = 0;
-	//
-	char CUIL[14];
-	//
+	int ID = 0, flag1 = 0, flag2 = 0;
 	Pantalla listaPantalla[CANT_EMP];
 	Publicidad listaPublicidad[CANT_EMP];
 	pantalla_Inicializar(listaPantalla,CANT_EMP);
@@ -31,9 +28,6 @@ int abmFantasma(void)
 		switch(opcion)
 		{
 			case 1:
-				//
-				utn_getCUIT("Ingrese CUIT","Error",5,CUIL);
-				//
 				pantalla_alta(listaPantalla,CANT_EMP,&ID);
 				flag1++;
 				imprimeMenu();
@@ -48,7 +42,6 @@ int abmFantasma(void)
 				else
 				{
 					pantalla_modificar(listaPantalla, CANT_EMP);
-					printf("\nBaja correcta");
 					imprimeMenu();
 				}
 				break;
@@ -57,6 +50,7 @@ int abmFantasma(void)
 				if(flag1<1)
 				{
 					printf("\nNo hay datos cargados");
+					printf("\nBaja correcta");
 					imprimeMenu();
 				}
 				else
@@ -66,6 +60,7 @@ int abmFantasma(void)
 					imprimeMenu();
 				}
 				break;
+
 			case 4:
 				if(flag1<1)
 				{
@@ -76,36 +71,54 @@ int abmFantasma(void)
 				{
 					pantalla_listar(listaPantalla,CANT_EMP);
 					publicidad_alta(listaPublicidad,CANT_EMP,ID);
+					flag2++;
 					imprimeMenu();
 				}
 				break;
-			case 5:
 
-				break;
-			case 8:
-				if(flag1<1)
+			case 5:
+				if(flag1<1 || flag2<1)
 				{
 					printf("\nNo hay datos cargados");
+					imprimeMenu();
 				}
 				else
 				{
-					utn_getInt(&opcionListar,"\n1.PromedioSueldos - 2.ListaEmpleados ","\nError",1,2,2);
-					switch(opcionListar)
-					{
-					case 1:
-						//promedioEmpleados(listaFantasma,CANT_EMP);
-						break;
-					case 2:
-						//sortEmpleados(listaFantasma, CANT_EMP);
-						//fantasma_listar(listaFantasma, CANT_EMP);
-						break;
-					}
-
+					publicidad_modificar(listaPublicidad,CANT_EMP,ID);
+					imprimeMenu();
 				}
+				break;
+
+			case 6:
+				if(flag1<1 || flag2<1)
+				{
+					printf("\nNo hay datos cargados");
+					imprimeMenu();
+				}
+				else
+				{
+					publicidad_baja(listaPublicidad,CANT_EMP,ID);
+					imprimeMenu();
+				}
+				break;
+
+			case 7:
+				break;
+
+			case 8:
+				publicidad_listar(listaPublicidad,CANT_EMP);
 				imprimeMenu();
 				break;
 
 			case 9:
+				pantalla_listar(listaPantalla,CANT_EMP);
+				imprimeMenu();
+				break;
+
+			case 10:
+				break;
+
+			case 11:
 				printf("Hasta pronto!");
 				break;
 			default:
@@ -115,7 +128,7 @@ int abmFantasma(void)
 				break;
 			}
 
-		}while(opcion != 9 && reintentos > 1);
+		}while(opcion != 11 && reintentos > 1);
 		if(reintentos <= 1)
 		{
 			printf("Cantidad de reintentos agotada\n");

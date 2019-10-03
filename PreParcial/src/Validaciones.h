@@ -6,7 +6,7 @@
 int isValidName(char* stringRecibido);
 int isValidNumber(char* stringRecibido,int limite);
 int isValidSignedNumber(char* stringRecibido);
-int isValidFloatNumber(char* stringRecibido);
+int isValidFloatNumber(char* stringRecibido,int limite);
 int isValidTelephone(char* stringRecibido);
 int isValidDNI(char* stringRecibido);
 int isValidCUIT(char* stringRecibido);
