@@ -1,25 +1,31 @@
-21:56:32 **** Incremental Build of configuration Debug for project PreParcial ****
+13:39:36 **** Incremental Build of configuration Debug for project PreParcial ****
 make all 
+Building file: ../src/Pantalla.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Pantalla.d" -MT"src/Pantalla.o" -o "src/Pantalla.o" "../src/Pantalla.c"
+Finished building: ../src/Pantalla.c
+ 
 Building file: ../src/PreParcial.c
 Invoking: GCC C Compiler
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/PreParcial.d" -MT"src/PreParcial.o" -o "src/PreParcial.o" "../src/PreParcial.c"
+In file included from ../src/PreParcial.c:5:0:
 ../src/PreParcial.c: In function ‘abmFantasma’:
-../src/PreParcial.c:31:5: warning: implicit declaration of function ‘pantalla_alta’ [-Wimplicit-function-declaration]
-     pantalla_alta(listaPantalla,CANT_EMP,&ID);
+../src/Pantalla.h:13:18: warning: passing argument 2 of ‘pantalla_baja’ makes pointer from integer without a cast [-Wint-conversion]
+ #define CANT_EMP 100
+                  ^
+../src/PreParcial.c:64:34: note: in expansion of macro ‘CANT_EMP’
+      pantalla_baja(listaPantalla,CANT_EMP);
+                                  ^~~~~~~~
+src/subdir.mk:30: recipe for target 'src/PreParcial.o' failed
+../src/Pantalla.h:45:5: note: expected ‘Publicidad * {aka struct <anonymous> *}’ but argument is of type ‘int’
+ int pantalla_baja(Pantalla pantArray[],Publicidad publiArrary[], int sizeArray);
      ^~~~~~~~~~~~~
-../src/PreParcial.c:44:6: warning: implicit declaration of function ‘fantasma_modificar’ [-Wimplicit-function-declaration]
-      fantasma_modificar(listaFantasma, CANT_EMP);
-      ^~~~~~~~~~~~~~~~~~
-src/subdir.mk:30: fallo en las instrucciones para el objetivo 'src/PreParcial.o'
-../src/PreParcial.c:44:25: error: ‘listaFantasma’ undeclared (first use in this function)
-      fantasma_modificar(listaFantasma, CANT_EMP);
-                         ^~~~~~~~~~~~~
-../src/PreParcial.c:44:25: note: each undeclared identifier is reported only once for each function it appears in
-../src/PreParcial.c:58:6: warning: implicit declaration of function ‘fantasma_baja’ [-Wimplicit-function-declaration]
-      fantasma_baja(listaFantasma,CANT_EMP);
+../src/PreParcial.c:64:6: error: too few arguments to function ‘pantalla_baja’
+      pantalla_baja(listaPantalla,CANT_EMP);
       ^~~~~~~~~~~~~
-../src/PreParcial.c:79:7: warning: implicit declaration of function ‘fantasma_listar’ [-Wimplicit-function-declaration]
-       fantasma_listar(listaFantasma, CANT_EMP);
-       ^~~~~~~~~~~~~~~
+In file included from ../src/PreParcial.c:5:0:
+../src/Pantalla.h:45:5: note: declared here
+ int pantalla_baja(Pantalla pantArray[],Publicidad publiArrary[], int sizeArray);
+     ^~~~~~~~~~~~~
 make: *** [src/PreParcial.o] Error 1
 "make all" terminated with exit code 2. Build might be incomplete.

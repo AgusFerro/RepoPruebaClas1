@@ -104,48 +104,33 @@ int isValidCUIT(char* stringRecibido)
 {
     int retorno=0;
     int i;
-    int j;
     char buffer[14];
     strncpy(buffer,stringRecibido,14);
 
     for(i=0;buffer[i]!='\0';i++)
     {
-        if((buffer[i]<'0' || buffer[i]>'9') && (buffer[i]!='-'))
+    	printf(buffer[i]);
+    	printf(i);
+
+        if(!(buffer[i]=='-' &&(i == 2 || i == 11)))
+        {
+        	retorno=-1;
+        	break;
+        }
+
+        if((buffer[i]<'0' || buffer[i]>'9') && (i > 2 && i < 11))
         {
             retorno=-1;
             break;
         }
 
-        if(buffer[i]=='-')  //elimino los -
-        {
-            for(j=i;buffer[j]!='\0';j++)
-            {
-                strncpy(&buffer[j],&buffer[j+1],1);
-            }
-        }
+        if((buffer[i]<'0' || buffer[i]>'9') && i==12)
+		{
+        	retorno=-1;
+        	break;
+		}
     }
 
-    int digitos[10]={2,3,4,5,6,7,2,3,4,5};
-    int acumulado = 0;
-    int verificador;
-
-    for(i=0;i < strlen(buffer-1); i++)
-    {
-        acumulado+=buffer[i]*digitos[i];
-    }
-
-    verificador=11-(acumulado%11);
-	if(verificador == 11)
-	{
-		verificador = 0;
-	}
-
-	if(buffer[11]!=verificador)
-    {
-        retorno=-1;
-    }
-
-    //if(stringRecibido[2]!='-' || stringRecibido[11]!='-' || stringRecibido[0]!='2' || stringRecibido[1]!='0' || stringRecibido[1]!='3' || stringRecibido[1]!='4' || stringRecibido[1]!='7')
     return retorno;
 }
 

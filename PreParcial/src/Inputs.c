@@ -257,18 +257,18 @@ int utn_getDNI(char* msg, char* msgError, int minSize, int maxSize, int reintent
 //***************************************
 int utn_getCUIT(char* msg, char* msgError, int reintentos, char* input)
 {
-    int maxSize=14; //con guiones 13 elementos
-    int minSize=11;  // sin puntos
+    int maxSize=14;
+    int minSize=12;
     int retorno=-1;
     char bufferStr[maxSize];
 
-    if(msg!=NULL && msgError!=NULL && minSize<maxSize && reintentos>=0 && input!=NULL)
+    if(msg!=NULL && msgError!=NULL && reintentos>=0 && input!=NULL)
     {
         do
         {
             if(!getString(msg,msgError,minSize,maxSize,&reintentos,bufferStr))
             {
-                if(isValidCUIT(bufferStr)==0)
+            	if(isValidCUIT(bufferStr)==0)
                 {
                     strncpy(input,bufferStr,maxSize);
                     retorno=0;
@@ -285,7 +285,6 @@ int utn_getCUIT(char* msg, char* msgError, int reintentos, char* input)
     }
     return retorno;
 }
-
 
 
 //*************************************************************

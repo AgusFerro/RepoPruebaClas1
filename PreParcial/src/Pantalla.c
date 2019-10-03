@@ -5,6 +5,7 @@
 #include <stdlib.h>
 #include "Inputs.h"
 #include "Pantalla.h"
+#include "Publicidad.h"
 
 void imprimeMenu()
 {
@@ -127,31 +128,49 @@ int pantalla_alta(Pantalla array[], int size, int* contadorID)
 
 //*****************************************
 
-int pantalla_baja(Pantalla array[], int sizeArray)
+int pantalla_baja(Pantalla pantArray[],Publicidad publiArray[], int sizeArray)
 {
     int retorno=-1;
     int posicion;
     int id;
-    if(array!=NULL && sizeArray>0)
+    if(pantArray!=NULL && sizeArray>0 && publiArray!=NULL)
     {
     	utn_getInt(&id,"\nID de pantalla a dar de baja: ","\nError",1,10,1);
-        if(fantasma_buscarID(array,sizeArray,id,&posicion)==-1)
+        if(pantalla_buscarID(pantArray,sizeArray,id,&posicion)==-1)
         {
             printf("\nNo existe este ID");
         }
         else
         {
-            array[posicion].isEmpty=1;
-            array[posicion].idPantalla=0;
-            array[posicion].tipo=0;
-            array[posicion].precioPorDia=0;
-            strcpy(array[posicion].nombre,"");
-            strcpy(array[posicion].direccion.calle,"");
-            array[posicion].direccion.altura=0;
-            retorno=0;
+            pantArray[posicion].isEmpty=1;
+            pantArray[posicion].idPantalla=0;
+            pantArray[posicion].tipo=0;
+            pantArray[posicion].precioPorDia=0;
+            strcpy(pantArray[posicion].nombre,"");
+            strcpy(pantArray[posicion].direccion.calle,"");
+            pantArray[posicion].direccion.altura=0;
         }
+        posicion = 0;
+        for(int i=0;i<CANT_EMP;i++)
+        {
+        	if(publicidad_buscarID(publiArray,sizeArray,id,&posicion)==-1)
+        	{
+        	   printf("\nNo existe publicidad para dar de baja en esta pantalla");
+        	}
+        	else
+        	{
+        	   	publiArray[posicion].isEmpty=1;
+        	   	publiArray[posicion].idPublicidad=0;
+        	   	publiArray[posicion].cantDias=0;
+        	    strcpy(publiArray[posicion].cuilCliente,"");
+        	    strcpy(publiArray[posicion].nombrePublicidad,"");
+        	}
+
+        }
+        retorno=0;
     }
-    return retorno;
+
+   	return retorno;
 }
 
 

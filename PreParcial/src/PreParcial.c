@@ -16,6 +16,9 @@ int abmFantasma(void)
 	int opcion,opcionListar;
 	int reintentos = 3;
 	int ID = 0, flag1 = 0;
+	//
+	char CUIL[14];
+	//
 	Pantalla listaPantalla[CANT_EMP];
 	Publicidad listaPublicidad[CANT_EMP];
 	pantalla_Inicializar(listaPantalla,CANT_EMP);
@@ -28,6 +31,9 @@ int abmFantasma(void)
 		switch(opcion)
 		{
 			case 1:
+				//
+				utn_getCUIT("Ingrese CUIT","Error",5,CUIL);
+				//
 				pantalla_alta(listaPantalla,CANT_EMP,&ID);
 				flag1++;
 				imprimeMenu();
@@ -41,7 +47,7 @@ int abmFantasma(void)
 				}
 				else
 				{
-					fantasma_modificar(listaFantasma, CANT_EMP);
+					pantalla_modificar(listaPantalla, CANT_EMP);
 					printf("\nBaja correcta");
 					imprimeMenu();
 				}
@@ -55,13 +61,20 @@ int abmFantasma(void)
 				}
 				else
 				{
-					fantasma_baja(listaFantasma,CANT_EMP);
+					pantalla_baja(listaPantalla,CANT_EMP);
 					flag1--;
-					imprimeMenu();
+
+
+						publicidad_buscarID(listaPublicidad,CANT_EMP);
+						flag1--;
+						imprimeMenu();
+
+
 				}
 				break;
-
 			case 4:
+				break;
+			case 8:
 				if(flag1<1)
 				{
 					printf("\nNo hay datos cargados");
@@ -76,7 +89,7 @@ int abmFantasma(void)
 						break;
 					case 2:
 						//sortEmpleados(listaFantasma, CANT_EMP);
-						fantasma_listar(listaFantasma, CANT_EMP);
+						//fantasma_listar(listaFantasma, CANT_EMP);
 						break;
 					}
 

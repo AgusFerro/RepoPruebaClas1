@@ -4,6 +4,7 @@
 #include <stdlib.h>
 #include "Inputs.h"
 #include "Publicidad.h"
+#include "Pantalla.h"
 
 int publicidad_Inicializar(Publicidad array[], int size)
 {
@@ -60,7 +61,7 @@ int publicidad_buscarID(Publicidad array[], int size, int valorBuscado, int* pos
     return retorno;
 }
 
-int publicidad_alta(Publicidad array[], int size, int* contadorID)
+int publicidad_alta(Publicidad array[], int size, int contadorID)
 {
     int retorno=-1;
     int posicion;
@@ -74,12 +75,9 @@ int publicidad_alta(Publicidad array[], int size, int* contadorID)
         {
         	array[posicion].isEmpty=0;
             utn_getInt(&array[posicion].idPublicidad,"\n:Elija una pantalla: ","\nNo existe la pantalla",1,contadorID,2);
-            utn_getFloat(&array[posicion].precioPorDia,"\nPrecio por dia: ","\nError",100,2000,2);
-            utn_getName("\nIngrese nombre de Pantalla: ","\nError",1,TEXT_SIZE,2,array[posicion].nombre);
-            utn_getName("\nIngrese calle: ","\nError",1,TEXT_SIZE,2,array[posicion].direccion.calle);
-            utn_getInt(&array[posicion].direccion.altura,"\nIngrese altura: ","\nError",1,3000,2);
-            (*contadorID)++;
-            array[posicion].idPantalla = *contadorID;
+            utn_getInt(&array[posicion].cantDias,"\n:Ingrese cantidad de dias: ","\nError",1,365,2);
+            utn_getName("\nIngrese nombre de Publicidad ","\nError",1,TEXT_SIZE,2,array[posicion].nombrePublicidad);
+            utn_getCUIT("\nIngrese Cuil: XX-XXXXXXXX-X","\nError",2,array[posicion].cuilCliente);
             printf("\n Posicion: %d"
             		"\n ID: %d"
             		"\n Tipo: %d"
@@ -88,12 +86,10 @@ int publicidad_alta(Publicidad array[], int size, int* contadorID)
             		"\n Calle: %s"
             		"\n Altura: %d",
                    posicion,
-				   array[posicion].idPantalla,
-				   array[posicion].tipo,
-				   array[posicion].precioPorDia,
-				   array[posicion].nombre,
-				   array[posicion].direccion.calle,
-				   array[posicion].direccion.altura);
+				   array[posicion].idPublicidad,
+				   array[posicion].cantDias,
+				   array[posicion].nombrePublicidad,
+				   array[posicion].cuilCliente);
             retorno=0;
         }
     }
@@ -102,27 +98,25 @@ int publicidad_alta(Publicidad array[], int size, int* contadorID)
 
 //*****************************************
 
-int publicidad_baja(Publicidad array[], int sizeArray)
+int publicidad_baja(Publicidad array[], int sizeArray,int contadorID)
 {
     int retorno=-1;
     int posicion;
     int id;
     if(array!=NULL && sizeArray>0)
     {
-    	utn_getInt(&id,"\nID de pantalla a dar de baja: ","\nError",1,10,1);
-        if(fantasma_buscarID(array,sizeArray,id,&posicion)==-1)
+    	utn_getInt(&id,"\nID de publicidad a dar de baja: ","\nError",1,contadorID,1);
+        if(publicidad_buscarID(array,sizeArray,id,&posicion)==-1)
         {
             printf("\nNo existe este ID");
         }
         else
         {
             array[posicion].isEmpty=1;
-            array[posicion].idPantalla=0;
-            array[posicion].tipo=0;
-            array[posicion].precioPorDia=0;
-            strcpy(array[posicion].nombre,"");
-            strcpy(array[posicion].direccion.calle,"");
-            array[posicion].direccion.altura=0;
+            array[posicion].idPublicidad=0;
+            array[posicion].cantDias=0;
+            strcpy(array[posicion].cuilCliente,"");
+            strcpy(array[posicion].nombrePublicidad,"");
             retorno=0;
         }
     }
@@ -135,7 +129,7 @@ int publicidad_modificar(Publicidad array[], int sizeArray)
     int retorno=-1;
     int posicion;
     int id;
-    char opcion;
+    int opcion;
     if(array!=NULL && sizeArray>0)
     {
     	utn_getInt(&id,"\nID de pantalla a modificar: ","\nError",1,CANT_EMP,2);
@@ -148,42 +142,12 @@ int publicidad_modificar(Publicidad array[], int sizeArray)
             do
             {
             	printf("\n Posicion: %d"
-            	            		"\n ID: %d"
-            	            		"\n Tipo: %d"
-            	            		"\n Precio por dia: %f"
-            	            		"\n Nombre: %s"
-            	            		"\n Calle: %s"
-            	            		"\n Altura: %d",
-            	                   posicion,
-            					   array[posicion].idPantalla,
-            					   array[posicion].tipo,
-            					   array[posicion].precioPorDia,
-            					   array[posicion].nombre,
-            					   array[posicion].direccion.calle,
-            					   array[posicion].direccion.altura);
-                utn_getChar("\nModificar: Tipo(A) Precio por dia(B) Nombre(C) Calle(D) Altura(E) S(Salir)","\nError",'A','S',2,&opcion);
-                switch(opcion)
-                {
-                    case 'A':
-                    	utn_getInt(&array[posicion].tipo,"\n:Elija un tipo 1-Led/2-LCD: ","\nError",1,2,1);
-                        break;
-                    case 'B':
-                        utn_getFloat(&array[posicion].precioPorDia,"\n:Precio por dia: ","\nError",100,2000,1);
-                        break;
-                    case 'C':
-                        utn_getName("\nNombre: ","\nError",1,TEXT_SIZE,1,array[posicion].nombre);
-                        break;
-                    case 'D':
-                    	utn_getName("\nCalle: ","\nError",1,TEXT_SIZE,1,array[posicion].direccion.calle);
-                        break;
-                    case 'E':
-                    	utn_getInt(&array[posicion].direccion.altura,"\nAltura: ","\nError",1,3000,1);
-                    	break;
-                    case 'S':
-                        break;
-                    default:
-                        printf("\nOpcion no valida");
-                }
+            	       "\n ID: %d"
+            	       "\n Cantidad de dias: %d",
+            	        posicion,
+            			array[posicion].idPublicidad,
+            			array[posicion].cantDias);
+
             }while(opcion!='S');
             retorno=0;
         }
@@ -206,18 +170,14 @@ int publicidad_listar(Publicidad array[], int size)
             else
             	printf("\n Posicion: %d"
             	       "\n ID: %d"
-            	       "\n Tipo: %d"
-            	       "\n Precio por dia: %f"
+            	       "\n Cantidad de dias: %d"
             	       "\n Nombre: %s"
-            	       "\n Calle: %s"
-            	       "\n Altura: %d",
-            	       i,
-            	       array[i].idPantalla,
-            	       array[i].tipo,
-            	       array[i].precioPorDia,
-            	       array[i].nombre,
-            	       array[i].direccion.calle,
-            	       array[i].direccion.altura);
+            	       "\n Cuil: %s",
+            	       	i,
+            	        array[i].idPublicidad,
+            	        array[i].cantDias,
+            	        array[i].nombrePublicidad,
+            	        array[i].cuilCliente);
         }
         retorno=0;
     }

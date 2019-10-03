@@ -7,6 +7,7 @@
 
 #ifndef PANTALLA_H_
 #define PANTALLA_H_
+#include "Publicidad.h"
 
 #define TEXT_SIZE 20
 #define CANT_EMP 100
@@ -35,17 +36,17 @@ void imprimeMenuModif();
 
 int pantalla_Inicializar(Pantalla array[], int size);
 
-int pantasma_buscarEmpty(Pantalla array[], int size, int* posicion);
+int pantalla_buscarEmpty(Pantalla array[], int size, int* posicion);
 
-int pantasma_buscarID(Pantalla array[], int size, int valorBuscado, int* posicion);
+int pantalla_buscarID(Pantalla array[], int size, int valorBuscado, int* posicion);
 
-int pantasma_alta(Pantalla array[], int size, int* contadorID);
+int pantalla_alta(Pantalla array[], int size, int* contadorID);
 
-int pantasma_baja(Pantalla array[], int sizeArray);
+int pantalla_baja(Pantalla pantArray[],Publicidad publiArrary[], int sizeArray);
 
-int pantasma_modificar(Pantalla array[], int sizeArray);
+int pantalla_modificar(Pantalla array[], int sizeArray);
 
-int pantasma_listar(Pantalla array[], int size);
+int pantalla_listar(Pantalla array[], int size);
 
 
 #endif // PANTALLA_H_INCLUDED

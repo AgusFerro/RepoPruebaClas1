@@ -2,13 +2,15 @@
 #ifndef PUBLICIDAD_H_
 #define PUBLICIDAD_H_
 
+#define TEXT_SIZE 20
+
 typedef struct
 {
     int idPublicidad;
     int isEmpty;
-    int cuilCliente;
+    char cuilCliente[14];
     int cantDias;
-    char nombrePubli[TEXT_SIZE];
+    char nombrePublicidad[TEXT_SIZE];
 
 }Publicidad;
 
@@ -18,9 +20,9 @@ int publicidad_buscarEmpty(Publicidad array[], int size, int* posicion);
 
 int publicidad_buscarID(Publicidad array[], int size, int valorBuscado, int* posicion);
 
-int publicidad_alta(Publicidad array[], int size, int* contadorID);
+int publicidad_alta(Publicidad array[], int size, int contadorID);
 
-int publicidad_baja(Publicidad array[], int sizeArray);
+int publicidad_baja(Publicidad array[], int sizeArray,int contadorID);
 
 int publicidad_modificar(Publicidad array[], int sizeArray);
 
