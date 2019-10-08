@@ -109,7 +109,7 @@ int isValidCUIT(char* stringRecibido)
 
     for(i=0;buffer[i]!='\0';i++)
     {
-        if(buffer[i]=='-' && (i != 2 && i != 11))
+        if(buffer[i]!='-' && (i == 2 || i == 11))
         {
         	retorno=-1;
         	break;
@@ -117,13 +117,13 @@ int isValidCUIT(char* stringRecibido)
 
         if((buffer[i]<'0' || buffer[i]>'9') && (i > 2 && i < 11))
         {
-            retorno=-1;
+            retorno=-2;
             break;
         }
 
         if((buffer[i]<'0' || buffer[i]>'9') && i==12)
 		{
-        	retorno=-1;
+        	retorno=-3;
         	break;
 		}
     }
