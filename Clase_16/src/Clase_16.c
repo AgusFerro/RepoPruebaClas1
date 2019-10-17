@@ -68,7 +68,7 @@ int main()
     printf("%s - %ld - %d/%d/%d", ptrPer->nombre, ptrPer->dni, ptrPer->fechaNac.dia, ptrPer->fechaNac.mes, ptrPer->fechaNac.anio);
 
 
-    printf("\n\nPUNTERO A ESTRUCTURA NOTACION PUNTERO:");
+    printf("\n\nPUNTERO A ESTRUCTURA NOTACION ARITMETICA:");
 
     printf("DNI: ");
     scanf("%ld", &(*ptrPer).dni);
