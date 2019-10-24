@@ -1,12 +1,15 @@
-22:20:47 **** Build of configuration Debug for project Clase_17 ****
+22:13:19 **** Incremental Build of configuration Debug for project Clase_18 ****
 make all 
-Building file: ../src/Clase_17.c
+Building file: ../src/Ejercicio-Clase_18.c
 Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Clase_17.d" -MT"src/Clase_17.o" -o "src/Clase_17.o" "../src/Clase_17.c"
-Finished building: ../src/Clase_17.c
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Ejercicio-Clase_18.d" -MT"src/Ejercicio-Clase_18.o" -o "src/Ejercicio-Clase_18.o" "../src/Ejercicio-Clase_18.c"
+Finished building: ../src/Ejercicio-Clase_18.c
  
-Building target: Clase_17
+Building target: Clase_18
 Invoking: GCC C Linker
-gcc  -o "Clase_17"  ./src/Clase_17.o   
-Finished building target: Clase_17
+gcc  -o "Clase_18"  ./src/Clase_18.o ./src/Ejercicio-Clase_18.o ./src/Inputs.o ./src/Validaciones.o   
+Finished building target: Clase_18
  
+22:13:22 **** Incremental Build of configuration Debug for project Clase_18 ****
+make all 
+make: No se hace nada para 'all'.
