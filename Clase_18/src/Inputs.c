@@ -25,6 +25,8 @@ int getString(char* msg, char* msgError, int min, int max, int reintentos, char*
     int retorno=-1;
     char bufferStr[max+10];
 
+    printf("Entro");
+
     if(msg!=NULL && msgError!=NULL && min<=max && reintentos>=0 && resultado!=NULL)
     {
         do

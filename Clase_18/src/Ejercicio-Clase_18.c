@@ -42,7 +42,7 @@ int main()
 	    {
 	        utn_getInt(&bufLegajo,"\nIngrese legajo del Empleado: ","\nError",1,900,3);
 
-	        getString("\nIngrese nombre del Empleado: ","\nError",'a','Z',3,bufNombre);
+	        getString("\nIngrese nombre del Empleado: ","\nError",1,20,3,bufNombre);
 
 	        utn_getName("\nIngrese apellido del Empleado: ","\nError",'a','Z',3,bufApellido);
 
