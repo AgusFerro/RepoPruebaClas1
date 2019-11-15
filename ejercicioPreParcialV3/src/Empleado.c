@@ -409,3 +409,17 @@ int em_calcularSueldo(void* p)
 	// hacer calculo de sueldo y escribirlo en campo sueldo del empleado
 	return returnAux;
 }
+
+int criterioSueldo(void* p)
+{
+    int sueldo;
+    int orden=-1;
+
+    employee_getSueldo(p,&sueldo);
+    if(sueldo>30000)
+    {
+    	orden=1;
+    }
+
+    return orden;
+}

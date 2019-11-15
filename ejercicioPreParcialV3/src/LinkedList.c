@@ -654,3 +654,31 @@ int al_map(LinkedList* this, int (*pFunc)(void*))
 
 	return returnAux;
 }
+
+LinkedList* al_filter(LinkedList* this, int (*pFunc)(void*), int orden)
+{
+	LinkedList* returnAux= NULL;
+	int len=ll_len(this);
+	LinkedList* filterList = NULL;
+	void* aux = NULL;
+
+	if(this!=NULL && (orden==1 || orden==0) && pFunc!=NULL && len>0)
+	{
+		filterList = ll_newLinkedList();
+		if(filterList!=NULL)
+		{
+			for(int i=0;i<len;i++)
+			{
+				aux=ll_get(this,i);
+				if((pFunc(aux)==1 && orden==1) ||
+				   (pFunc(aux)==-1 && orden==0))
+				{
+					ll_add(filterList,aux);
+				}
+			}
+			returnAux=filterList;
+		}
+	}
+
+	return returnAux;
+}

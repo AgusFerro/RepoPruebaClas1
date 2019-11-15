@@ -34,5 +34,6 @@ int employee_buscarMaxId(LinkedList* pArrayListEmployee);
 int employee_validarEmpleado(Empleado* pEmpleado);
 
 int em_calcularSueldo(void* p);
+int criterioSueldo(void* p);
 
 #endif // EMPLEADO_H_INCLUDED

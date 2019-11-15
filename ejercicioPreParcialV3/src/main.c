@@ -29,6 +29,7 @@ int main()
 {
     // Definir lista de empleados
     LinkedList* listaEmpleados;
+    LinkedList* listaFiltro;
 
     // Crear lista empledos
     listaEmpleados=ll_newLinkedList();
@@ -47,11 +48,28 @@ int main()
             printf("Archivo generado correctamente\n");
         }
         else
+        {
             printf("Error generando archivo\n");
+        }
+
+
+        listaFiltro=al_filter(listaEmpleados,criterioSueldo,1);
+        if(listaFiltro!=NULL)
+        {
+        	if(controller_saveAsText("filtro.csv",listaFiltro)==0)
+        	{
+            printf("Archivo generado correctamente\n");
+        	}
+        }
+        else
+        {
+            printf("Error generando archivo\n");
+        }
     }
     else
+    {
         printf("Error leyendo empleados\n");
-
+    }
 
     return 0;
 }
