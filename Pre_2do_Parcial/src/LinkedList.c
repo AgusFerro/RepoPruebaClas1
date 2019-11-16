@@ -629,3 +629,106 @@ int ll_sort(LinkedList* this, int (*pFunc)(void* ,void*), int order)
     return returnAux;
 }
 
+
+int ll_map(LinkedList* this, int (*pFunc)(void*))
+{
+	int returnAux=-1;
+	int len=ll_len(this);
+
+	if(this!=NULL && pFunc!= NULL)
+	{
+		for(int i=0;i<len;i++)
+		{
+			if(em_calcularSueldo(ll_get(this,i))==0)
+			{
+				returnAux=0;
+			}
+			else
+			{
+				returnAux=-1;
+				break;
+			}
+		}
+
+	}
+
+	return returnAux;
+}
+
+LinkedList* ll_filter(LinkedList* this, int (*pFunc)(void*), int orden)
+{
+	LinkedList* returnAux= NULL;
+	int len=ll_len(this);
+	LinkedList* filterList = NULL;
+	void* aux = NULL;
+
+	if(this!=NULL && (orden==1 || orden==0) && pFunc!=NULL && len>0)
+	{
+		filterList = ll_newLinkedList();
+		if(filterList!=NULL)
+		{
+			for(int i=0;i<len;i++)
+			{
+				aux=ll_get(this,i);
+				if((pFunc(aux)==1 && orden==1) ||
+				   (pFunc(aux)==-1 && orden==0))
+				{
+					ll_add(filterList,aux);
+				}
+			}
+			returnAux=filterList;
+		}
+	}
+
+	return returnAux;
+}
+
+/*
+int em_calcularSueldo(void* p)
+{
+	int returnAux=-1;
+	int horas;
+	int sueldo;
+
+	if(p!=NULL)
+	{
+		employee_getHorasTrabajadas(p,&horas);
+		if(horas<=120)
+		{
+			sueldo=horas*180;
+		}
+		else if(horas>120 && horas<=160)
+		{
+			horas=horas-120;
+			sueldo=(horas*240)+(120*180);
+		}
+		else if(horas>160)
+		{
+			horas=horas-160;
+			sueldo=(horas*350)+(40*240)+(120*180);
+		}
+
+		if(employee_setSueldo(p,sueldo)==0)
+		{
+			returnAux=0;
+		}
+	}
+	// recibo elemento empleado como void.
+	// hacer calculo de sueldo y escribirlo en campo sueldo del empleado
+	return returnAux;
+}
+
+int criterioSueldo(void* p)
+{
+    int sueldo;
+    int orden=0;
+
+    employee_getSueldo(p,&sueldo);
+    if(sueldo>30000)
+    {
+    	orden=1;
+    }
+
+    return orden;
+}
+*/

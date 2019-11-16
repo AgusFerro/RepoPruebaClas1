@@ -27,6 +27,7 @@
 
 int main()
 {
+	int acumulador;
     // Definir lista de empleados
     LinkedList* listaEmpleados;
     LinkedList* listaFiltro;
@@ -40,7 +41,7 @@ int main()
     {
         // Calcular sueldos
         printf("Calculando sueldos de empleados\n");
-        al_map(listaEmpleados,em_calcularSueldo);
+        ll_map(listaEmpleados,em_calcularSueldo);
 
         // Generar archivo de salida
         if(controller_saveAsText("sueldos.csv",listaEmpleados)==0)
@@ -52,8 +53,9 @@ int main()
             printf("Error generando archivo\n");
         }
 
-
-        listaFiltro=al_filter(listaEmpleados,criterioSueldo,1);
+        acumulador=ll_count(listaEmpleados,criterioSueldo,1);
+        printf("Filtrados: %d",acumulador);
+        listaFiltro=ll_filter(listaEmpleados,criterioSueldo,1);
         if(listaFiltro!=NULL)
         {
         	if(controller_saveAsText("filtro.csv",listaFiltro)==0)
