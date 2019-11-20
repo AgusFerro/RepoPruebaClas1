@@ -683,6 +683,32 @@ LinkedList* ll_filter(LinkedList* this, int (*pFunc)(void*), int orden)
 	return returnAux;
 }
 
+int ll_count(LinkedList* this, int (*pFunc)(void* element),int order)
+{
+	int returnAux = -1;
+	int len=ll_len(this);
+	int acumulador = 0;
+	void* aux = NULL;
+
+	if(this!=NULL && (order == 0 || order == 1) && pFunc!=NULL && len>0)
+	{
+		for(int i=0;i<len;i++)
+			{
+				aux=ll_get(this,i);
+				if(aux!=NULL)
+				{
+					if((pFunc(aux)==1 && order==1) ||
+					(pFunc(aux)==-1 && order==0))
+					{
+					acumulador++;
+					}
+				}
+			}
+			returnAux=acumulador;
+		}
+	return returnAux;
+}
+
 /*
 int em_calcularSueldo(void* p)
 {
