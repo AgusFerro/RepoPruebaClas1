@@ -1,7 +1,0 @@
-21:01:37 **** Clean-only build of configuration Debug for project Prueba ****
-make clean 
-rm -rf  ./src/Prueba.o  ./src/Prueba.d  Prueba
- 
-
-21:01:37 Build Finished. 0 errors, 0 warnings. (took 338ms)
-
