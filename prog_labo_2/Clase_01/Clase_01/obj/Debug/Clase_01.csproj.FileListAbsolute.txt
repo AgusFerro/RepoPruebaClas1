@@ -1,0 +1,14 @@
+C:\Users\agusf\Source\Repos\Clase_01\Clase_01\bin\Debug\Clase_01.exe.config
+C:\Users\agusf\Source\Repos\Clase_01\Clase_01\bin\Debug\Clase_01.exe
+C:\Users\agusf\Source\Repos\Clase_01\Clase_01\bin\Debug\Clase_01.pdb
+C:\Users\agusf\Source\Repos\Clase_01\Clase_01\obj\Debug\Clase_01.csprojAssemblyReference.cache
+C:\Users\agusf\Source\Repos\Clase_01\Clase_01\obj\Debug\Clase_01.csproj.CoreCompileInputs.cache
+C:\Users\agusf\Source\Repos\Clase_01\Clase_01\obj\Debug\Clase_01.exe
+C:\Users\agusf\Source\Repos\Clase_01\Clase_01\obj\Debug\Clase_01.pdb
+C:\Users\agusf\Documents\WorkSpace\prog_labo_2\Clase_01\Clase_01\bin\Debug\Clase_01.exe.config
+C:\Users\agusf\Documents\WorkSpace\prog_labo_2\Clase_01\Clase_01\bin\Debug\Clase_01.exe
+C:\Users\agusf\Documents\WorkSpace\prog_labo_2\Clase_01\Clase_01\bin\Debug\Clase_01.pdb
+C:\Users\agusf\Documents\WorkSpace\prog_labo_2\Clase_01\Clase_01\obj\Debug\Clase_01.csprojAssemblyReference.cache
+C:\Users\agusf\Documents\WorkSpace\prog_labo_2\Clase_01\Clase_01\obj\Debug\Clase_01.csproj.CoreCompileInputs.cache
+C:\Users\agusf\Documents\WorkSpace\prog_labo_2\Clase_01\Clase_01\obj\Debug\Clase_01.exe
+C:\Users\agusf\Documents\WorkSpace\prog_labo_2\Clase_01\Clase_01\obj\Debug\Clase_01.pdb
