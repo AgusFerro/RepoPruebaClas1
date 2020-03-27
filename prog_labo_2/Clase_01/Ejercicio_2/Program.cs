@@ -22,16 +22,21 @@ namespace Ejercicio_2
             number = Console.ReadLine();
             success = int.TryParse(number, out numero);
 
-            if(success == true) 
+            while (success == false || numero < 0)
             {
-                alCuadrado = Math.Pow(numero, 2);
-                alCubo = Math.Pow(numero, 3);
+                Console.WriteLine("ERROR, Reingrese el numero");
+                number = Console.ReadLine();
+                success = int.TryParse(number, out numero);
 
-                Console.WriteLine("{0} al cuadrado es: {1}", numero, alCuadrado);
-                Console.WriteLine("{0} al cubo es: {1}", numero, alCubo);
-
-                Console.ReadKey();
             }
+
+            alCuadrado = Math.Pow(numero, 2);
+            alCubo = Math.Pow(numero, 3);
+
+            Console.WriteLine("{0} al cuadrado es: {1}", numero, alCuadrado);
+            Console.WriteLine("{0} al cubo es: {1}", numero, alCubo);
+
+            Console.ReadKey();
             
         }
     }
