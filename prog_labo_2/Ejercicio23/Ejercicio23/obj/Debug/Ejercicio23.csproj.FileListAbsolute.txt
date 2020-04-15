@@ -1,0 +1,13 @@
+C:\Users\agusf\Source\Repos\Ejercicio23\Ejercicio23\bin\Debug\Ejercicio23.exe.config
+C:\Users\agusf\Source\Repos\Ejercicio23\Ejercicio23\bin\Debug\Ejercicio23.exe
+C:\Users\agusf\Source\Repos\Ejercicio23\Ejercicio23\bin\Debug\Ejercicio23.pdb
+C:\Users\agusf\Source\Repos\Ejercicio23\Ejercicio23\bin\Debug\Monedas.dll
+C:\Users\agusf\Source\Repos\Ejercicio23\Ejercicio23\bin\Debug\Monedas.pdb
+C:\Users\agusf\Source\Repos\Ejercicio23\Ejercicio23\obj\Debug\Ejercicio23.csprojAssemblyReference.cache
+C:\Users\agusf\Source\Repos\Ejercicio23\Ejercicio23\obj\Debug\Ejercicio23.Form1.resources
+C:\Users\agusf\Source\Repos\Ejercicio23\Ejercicio23\obj\Debug\Ejercicio23.Properties.Resources.resources
+C:\Users\agusf\Source\Repos\Ejercicio23\Ejercicio23\obj\Debug\Ejercicio23.csproj.GenerateResource.cache
+C:\Users\agusf\Source\Repos\Ejercicio23\Ejercicio23\obj\Debug\Ejercicio23.csproj.CoreCompileInputs.cache
+C:\Users\agusf\Source\Repos\Ejercicio23\Ejercicio23\obj\Debug\Ejercicio23.csproj.CopyComplete
+C:\Users\agusf\Source\Repos\Ejercicio23\Ejercicio23\obj\Debug\Ejercicio23.exe
+C:\Users\agusf\Source\Repos\Ejercicio23\Ejercicio23\obj\Debug\Ejercicio23.pdb

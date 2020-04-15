@@ -1,0 +1,6 @@
+C:\Users\agusf\Source\Repos\Ejercicio20\Pesos\bin\Debug\Pesos.dll
+C:\Users\agusf\Source\Repos\Ejercicio20\Pesos\bin\Debug\Pesos.pdb
+C:\Users\agusf\Source\Repos\Ejercicio20\Pesos\obj\Debug\Billetes.csprojAssemblyReference.cache
+C:\Users\agusf\Source\Repos\Ejercicio20\Pesos\obj\Debug\Billetes.csproj.CoreCompileInputs.cache
+C:\Users\agusf\Source\Repos\Ejercicio20\Pesos\obj\Debug\Pesos.dll
+C:\Users\agusf\Source\Repos\Ejercicio20\Pesos\obj\Debug\Pesos.pdb
