@@ -1,0 +1,2 @@
+C:\Users\agusf\Source\Repos\Ejercicio32\Ejercicio32\obj\Debug\Ejercicio32.csprojAssemblyReference.cache
+C:\Users\agusf\Source\Repos\Ejercicio32\Ejercicio32\obj\Debug\Ejercicio32.csproj.CoreCompileInputs.cache

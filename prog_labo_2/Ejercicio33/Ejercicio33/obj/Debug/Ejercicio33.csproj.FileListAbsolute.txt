@@ -1,0 +1,7 @@
+C:\Users\agusf\Source\Repos\Ejercicio33\Ejercicio33\bin\Debug\Ejercicio33.exe.config
+C:\Users\agusf\Source\Repos\Ejercicio33\Ejercicio33\bin\Debug\Ejercicio33.exe
+C:\Users\agusf\Source\Repos\Ejercicio33\Ejercicio33\bin\Debug\Ejercicio33.pdb
+C:\Users\agusf\Source\Repos\Ejercicio33\Ejercicio33\obj\Debug\Ejercicio33.csprojAssemblyReference.cache
+C:\Users\agusf\Source\Repos\Ejercicio33\Ejercicio33\obj\Debug\Ejercicio33.csproj.CoreCompileInputs.cache
+C:\Users\agusf\Source\Repos\Ejercicio33\Ejercicio33\obj\Debug\Ejercicio33.exe
+C:\Users\agusf\Source\Repos\Ejercicio33\Ejercicio33\obj\Debug\Ejercicio33.pdb
