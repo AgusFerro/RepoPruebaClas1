@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "CentralTelefonica\T
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CentralitaHerencia", "CentralitaHerencia\CentralitaHerencia.csproj", "{29EF0ABD-0B48-4DF3-AAD1-8C3ECEB6F6B8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsForms", "WindowsForms\WindowsForms.csproj", "{BF6747F2-12DD-4457-B7F4-32F997607662}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{29EF0ABD-0B48-4DF3-AAD1-8C3ECEB6F6B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{29EF0ABD-0B48-4DF3-AAD1-8C3ECEB6F6B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{29EF0ABD-0B48-4DF3-AAD1-8C3ECEB6F6B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF6747F2-12DD-4457-B7F4-32F997607662}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF6747F2-12DD-4457-B7F4-32F997607662}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF6747F2-12DD-4457-B7F4-32F997607662}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF6747F2-12DD-4457-B7F4-32F997607662}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

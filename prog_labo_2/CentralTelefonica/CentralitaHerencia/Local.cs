@@ -38,18 +38,24 @@ namespace CentralitaHerencia
 
         protected override string Mostrar()
         {
-            StringBuilder cadenaLocal = new StringBuilder();
+            //StringBuilder cadenaLocal = new StringBuilder();
 
-            /*cadenaLocal.AppendLine($"Duracion : {this.Duracion}");
-            cadenaLocal.AppendLine($"Numero de Destino : {this.NroDestino}");
-            cadenaLocal.AppendLine($"Numero de Origen : {this.NroOrigen}");   */
+            ////cadenaLocal.AppendLine($"Duracion : {this.Duracion}");
+            ////cadenaLocal.AppendLine($"Numero de Destino : {this.NroDestino}");
+            ////cadenaLocal.AppendLine($"Numero de Origen : {this.NroOrigen}");   
+            ////cadenaLocal.AppendLine($"Costo : {this.CostoLlamada}");
 
-            cadenaLocal.AppendLine($"Costo : {this.CostoLlamada}");
+            //return cadenaLocal.ToString();
+            return base.Mostrar();
 
-            return cadenaLocal.ToString();
         }
 
-        public override bool Equals(object obj)
+        public new string ToString()
+        {
+            return Mostrar();
+        }
+
+        public new bool Equals(object obj)
         {
             bool b = false;
 

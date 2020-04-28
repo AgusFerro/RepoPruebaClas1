@@ -90,10 +90,10 @@ namespace CentralitaHerencia
             return cadenaLlamada.ToString();
         }
 
-        public static bool operator ==(Llamada l1, Llamada l2)
+        public static bool operator ==(Llamada llamada1, Llamada llamada2)
         {
             bool b;
-            if (l1.Equals(l2))
+            if (llamada1.Equals(llamada2))
             {
                 b = true;
             }
@@ -105,10 +105,10 @@ namespace CentralitaHerencia
             return b;
         }
 
-        public static bool operator !=(Llamada l1, Llamada l2)
+        public static bool operator !=(Llamada llamada1, Llamada llamada2)
         {
             bool b;
-            if (l1.Equals(l2))
+            if (llamada1.Equals(llamada2))
             {
                 b = false;
             }

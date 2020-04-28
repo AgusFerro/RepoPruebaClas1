@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -59,7 +60,12 @@ namespace CentralitaHerencia
             this.razonSocial = nombreEmpresa;
         }
 
-        public float CalcularGanancia(Llamada.TipoLlamada tipo)
+        private void AgregarLlamada(Llamada nuevaLlamada)
+        {
+            this.Llamadas.Add(nuevaLlamada);
+        } 
+
+        private float CalcularGanancia(Llamada.TipoLlamada tipo)
         {
             float total = 0;
 
@@ -70,7 +76,7 @@ namespace CentralitaHerencia
                     case Llamada.TipoLlamada.Local:
                         if(item is Local)
                         {
-                            total += ((Local)item).Costo;
+                            total += ((Local)item).CostoLlamada;
                         }
                         break;
                     case Llamada.TipoLlamada.Provincial:
@@ -86,7 +92,7 @@ namespace CentralitaHerencia
                         }
                         else if(item is Local)
                         {
-                            total += ((Local)item).Costo;
+                            total += ((Local)item).CostoLlamada;
                         }
                         break;
                 }
@@ -95,7 +101,12 @@ namespace CentralitaHerencia
             return total;
         }
 
-        public string Mostrar()
+        public new string ToString()
+        {
+            return Mostrar();
+        }
+
+        private string Mostrar()
         {
             StringBuilder cadenaCentralita = new StringBuilder();
 
@@ -107,11 +118,11 @@ namespace CentralitaHerencia
             {
                 if(item is Local)
                 {
-                    Console.WriteLine(((Local)item).Mostrar());
+                    Console.WriteLine(((Local)item).ToString());
                 }
                 else if(item is Provincial)
                 {
-                    Console.WriteLine(((Provincial)item).Mostrar());
+                    Console.WriteLine(((Provincial)item).ToString());
                 }
             }
 
@@ -121,6 +132,46 @@ namespace CentralitaHerencia
         public void OrdenarLlamadas()
         {
             this.Llamadas.Sort(Llamada.OrdenarPorDuracion);
+        }
+
+        public static bool operator ==(Centralita c, Llamada llamada)
+        {
+            bool b = false;
+            foreach(Llamada item in c.Llamadas)
+            {
+                if(llamada == item)
+                {
+                    b = true;
+                    break;
+                }
+            }
+
+            return b;
+        }
+
+        public static bool operator !=(Centralita c, Llamada llamada)
+        {
+            bool b = true;
+            foreach (Llamada item in c.Llamadas)
+            {
+                if (llamada == item)
+                {
+                    b = false;
+                    break;
+                }
+            }
+
+            return b;
+        }
+
+        public static Centralita operator +(Centralita c, Llamada nuevaLlamada)
+        {
+            if((c == nuevaLlamada) == false)
+            {
+                c.AgregarLlamada(nuevaLlamada);
+            }
+
+            return c;
         }
         #endregion
     }

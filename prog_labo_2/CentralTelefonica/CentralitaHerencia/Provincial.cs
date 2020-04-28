@@ -58,16 +58,21 @@ namespace CentralitaHerencia
         {
             StringBuilder cadenaProvincial = new StringBuilder();
 
-            /*cadenaProvincial.AppendLine($"Duracion : {this.Duracion}");
-            cadenaProvincial.AppendLine($"Numero de Destino : {this.NroDestino}");
-            cadenaProvincial.AppendLine($"Numero de Origen : {this.NroOrigen}");  */
-            cadenaProvincial.AppendLine($"Costo : {this.CostoLlamada}");
-            cadenaProvincial.AppendLine($"Franja : {this.franjaHoraria}");
+            //cadenaProvincial.AppendLine($"Duracion : {this.Duracion}");
+            //cadenaProvincial.AppendLine($"Numero de Destino : {this.NroDestino}");
+            //cadenaProvincial.AppendLine($"Numero de Origen : {this.NroOrigen}");
+            //cadenaProvincial.AppendLine($"Costo : {this.CostoLlamada}");
+            //cadenaProvincial.AppendLine($"Franja : {this.franjaHoraria}");
+            cadenaProvincial.AppendLine(base.Mostrar() + $"Franja : {this.franjaHoraria}");
 
             return cadenaProvincial.ToString();
         }
 
-        public override bool Equals(object obj)
+        public new string ToString()
+        {
+            return Mostrar();
+        }
+        public new bool Equals(object obj)
         {
             bool b = false;
 
