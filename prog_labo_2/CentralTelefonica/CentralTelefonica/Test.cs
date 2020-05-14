@@ -35,6 +35,14 @@ namespace Test
             c = c + l3;
             c = c + l4;
 
+            try { c = c + l4; }
+
+            catch(CentralitaException e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            
+
             c.OrdenarLlamadas();
             Console.WriteLine(c.ToString());
 

@@ -30,5 +30,26 @@ namespace WindowsForms
         {
             this.Close();
         }
+
+        private void btnFacturacionTotal_Click(object sender, EventArgs e)
+        {
+            FrmMostrar mostrar = new FrmMostrar(centralita);
+            mostrar.Tipo = Llamada.TipoLlamada.Todas;
+            mostrar.ShowDialog();
+        }
+
+        private void btnFacturacionLocal_Click(object sender, EventArgs e)
+        {
+            FrmMostrar mostrar = new FrmMostrar(centralita);
+            mostrar.Tipo = Llamada.TipoLlamada.Local;
+            mostrar.ShowDialog();
+        }
+
+        private void btnFacturacionProvincial_Click(object sender, EventArgs e)
+        {
+            FrmMostrar mostrar = new FrmMostrar(centralita);
+            mostrar.Tipo = Llamada.TipoLlamada.Provincial;
+            mostrar.ShowDialog();
+        }
     }
 }

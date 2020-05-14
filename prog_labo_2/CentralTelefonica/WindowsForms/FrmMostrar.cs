@@ -31,7 +31,44 @@ namespace WindowsForms
 
         private void FrmMostrar_Load(object sender, EventArgs e)
         {
-            richTextBox1.Text = this.centralita.
+            StringBuilder sb = new StringBuilder();
+
+            sb.AppendLine(this.centralita.ToString());
+            foreach(Llamada item in this.centralita.Llamadas)
+            { 
+                switch (tipo)
+                {
+                    case Llamada.TipoLlamada.Todas:
+                        sb.AppendLine(item.ToString());
+                        break;
+                    case Llamada.TipoLlamada.Local:
+                        if(item is Local)
+                        {
+                            sb.AppendLine(item.ToString());
+                        }
+                        break;
+                    case Llamada.TipoLlamada.Provincial:
+                        if(item is Provincial)
+                        {
+                            sb.AppendLine(item.ToString());
+                        }
+                        break;
+                }
+            }
+            if (tipo == Llamada.TipoLlamada.Local)
+            {
+                sb.AppendLine($"Facturacion Local: {this.centralita.GananciasPorLocal}");
+            }
+            else if (tipo == Llamada.TipoLlamada.Provincial)
+            {
+                sb.AppendLine($"Facturacion Provincial: {this.centralita.GananciasPorProvincial}");
+            }
+            else
+            {
+                sb.AppendLine($"Facturacion Total: {this.centralita.GananciasPorTotal}");
+            }
+                
+            richTextBox1.Text = sb.ToString();
         }
     }
 }

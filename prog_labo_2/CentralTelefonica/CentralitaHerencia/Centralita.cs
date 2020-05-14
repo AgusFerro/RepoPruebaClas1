@@ -111,20 +111,13 @@ namespace CentralitaHerencia
             StringBuilder cadenaCentralita = new StringBuilder();
 
             cadenaCentralita.AppendLine($"Razon Social: {this.razonSocial}");
-            cadenaCentralita.AppendLine($"Ganancias por Local: {this.GananciasPorLocal}");
-            cadenaCentralita.AppendLine($"Ganancias por Provincial: {this.GananciasPorProvincial}");
-            cadenaCentralita.AppendLine($"Ganancias totales: {this.GananciasPorTotal}");
+            //cadenaCentralita.AppendLine($"Ganancias por Local: {this.GananciasPorLocal}");
+            //cadenaCentralita.AppendLine($"Ganancias por Provincial: {this.GananciasPorProvincial}");
+            //cadenaCentralita.AppendLine($"Ganancias totales: {this.GananciasPorTotal}");
+            
             foreach(Llamada item in this.Llamadas)
             {
-                //item.ToString();
-                if(item is Local)
-                {
-                    Console.WriteLine(((Local)item).ToString());
-                }
-                else if(item is Provincial)
-                {
-                    Console.WriteLine(((Provincial)item).ToString());
-                }
+                cadenaCentralita.AppendLine(item.ToString());   
             }
 
             return cadenaCentralita.ToString();
@@ -170,6 +163,10 @@ namespace CentralitaHerencia
             if((c == nuevaLlamada) == false)
             {
                 c.AgregarLlamada(nuevaLlamada);
+            }
+            else
+            {
+                throw new CentralitaException("No puede agregar una llamada que ya esta en la lista", "Centralita", "public static Centralita operator +");
             }
 
             return c;

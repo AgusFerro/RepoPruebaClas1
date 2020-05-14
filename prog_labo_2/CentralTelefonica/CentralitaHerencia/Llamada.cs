@@ -89,6 +89,10 @@ namespace CentralitaHerencia
 
             return cadenaLlamada.ToString();
         }
+        public override string ToString()
+        {
+            return Mostrar();
+        }
 
         public static bool operator ==(Llamada llamada1, Llamada llamada2)
         {
