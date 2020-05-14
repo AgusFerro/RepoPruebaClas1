@@ -116,6 +116,7 @@ namespace CentralitaHerencia
             cadenaCentralita.AppendLine($"Ganancias totales: {this.GananciasPorTotal}");
             foreach(Llamada item in this.Llamadas)
             {
+                //item.ToString();
                 if(item is Local)
                 {
                     Console.WriteLine(((Local)item).ToString());

@@ -46,14 +46,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="Central Telefonica.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Central Telefonica.Designer.cs">
+      <DependentUpon>Central Telefonica.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmLlamador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLlamador.Designer.cs">
+      <DependentUpon>FrmLlamador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMostrar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMostrar.Designer.cs">
+      <DependentUpon>FrmMostrar.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Central Telefonica.resx">
+      <DependentUpon>Central Telefonica.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLlamador.resx">
+      <DependentUpon>FrmLlamador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMostrar.resx">
+      <DependentUpon>FrmMostrar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -75,6 +96,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CentralitaHerencia\CentralitaHerencia.csproj">
+      <Project>{29ef0abd-0b48-4df3-aad1-8c3eceb6f6b8}</Project>
+      <Name>CentralitaHerencia</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

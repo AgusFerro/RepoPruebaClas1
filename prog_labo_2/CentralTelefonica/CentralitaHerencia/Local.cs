@@ -50,7 +50,7 @@ namespace CentralitaHerencia
 
         }
 
-        public new string ToString()
+        public override string ToString()
         {
             return Mostrar();
         }

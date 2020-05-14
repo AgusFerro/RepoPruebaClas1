@@ -68,7 +68,7 @@ namespace CentralitaHerencia
             return cadenaProvincial.ToString();
         }
 
-        public new string ToString()
+        public override string ToString()
         {
             return Mostrar();
         }
