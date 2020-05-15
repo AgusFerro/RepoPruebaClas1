@@ -134,7 +134,7 @@ namespace CentralitaHerencia
             foreach(Llamada item in c.Llamadas)
             {
                 if(llamada == item)
-                {
+                { 
                     b = true;
                     break;
                 }
@@ -145,17 +145,7 @@ namespace CentralitaHerencia
 
         public static bool operator !=(Centralita c, Llamada llamada)
         {
-            bool b = true;
-            foreach (Llamada item in c.Llamadas)
-            {
-                if (llamada == item)
-                {
-                    b = false;
-                    break;
-                }
-            }
-
-            return b;
+            return !(c == llamada);
         }
 
         public static Centralita operator +(Centralita c, Llamada nuevaLlamada)

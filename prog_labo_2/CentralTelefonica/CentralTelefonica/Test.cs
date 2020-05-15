@@ -42,7 +42,6 @@ namespace Test
                 Console.WriteLine(e.Message);
             }
             
-
             c.OrdenarLlamadas();
             Console.WriteLine(c.ToString());
 

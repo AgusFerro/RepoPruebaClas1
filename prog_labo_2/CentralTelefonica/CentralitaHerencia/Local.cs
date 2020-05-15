@@ -55,7 +55,7 @@ namespace CentralitaHerencia
             return Mostrar();
         }
 
-        public new bool Equals(object obj)
+        public override bool Equals(object obj)
         {
             bool b = false;
 

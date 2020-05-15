@@ -96,14 +96,10 @@ namespace CentralitaHerencia
 
         public static bool operator ==(Llamada llamada1, Llamada llamada2)
         {
-            bool b;
-            if (llamada1.Equals(llamada2))
+            bool b = false;
+            if (llamada1.Equals(llamada2) || (llamada1.NroDestino == llamada2.NroDestino && llamada1.NroOrigen == llamada2.NroOrigen && llamada1.GetType() == llamada2.GetType()))
             {
                 b = true;
-            }
-            else
-            {
-                b = false;
             }
 
             return b;
@@ -111,17 +107,7 @@ namespace CentralitaHerencia
 
         public static bool operator !=(Llamada llamada1, Llamada llamada2)
         {
-            bool b;
-            if (llamada1.Equals(llamada2))
-            {
-                b = false;
-            }
-            else
-            {
-                b = true;
-            }
-
-            return b;
+            return !(llamada1 == llamada2);
         }
         #endregion
     }
