@@ -33,7 +33,6 @@ namespace WindowsForms
         {
             StringBuilder sb = new StringBuilder();
 
-            sb.AppendLine(this.centralita.ToString());
             foreach(Llamada item in this.centralita.Llamadas)
             { 
                 switch (tipo)
