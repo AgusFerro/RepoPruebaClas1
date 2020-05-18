@@ -1,0 +1,10 @@
+C:\Users\agusf\Source\Repos\Ejercicio42\Ejercicio42\bin\Debug\Ejercicio42.exe.config
+C:\Users\agusf\Source\Repos\Ejercicio42\Ejercicio42\bin\Debug\Ejercicio42.exe
+C:\Users\agusf\Source\Repos\Ejercicio42\Ejercicio42\bin\Debug\Ejercicio42.pdb
+C:\Users\agusf\Source\Repos\Ejercicio42\Ejercicio42\bin\Debug\Entidades.dll
+C:\Users\agusf\Source\Repos\Ejercicio42\Ejercicio42\bin\Debug\Entidades.pdb
+C:\Users\agusf\Source\Repos\Ejercicio42\Ejercicio42\obj\Debug\Ejercicio42.csprojAssemblyReference.cache
+C:\Users\agusf\Source\Repos\Ejercicio42\Ejercicio42\obj\Debug\Ejercicio42.csproj.CoreCompileInputs.cache
+C:\Users\agusf\Source\Repos\Ejercicio42\Ejercicio42\obj\Debug\Ejercicio42.csproj.CopyComplete
+C:\Users\agusf\Source\Repos\Ejercicio42\Ejercicio42\obj\Debug\Ejercicio42.exe
+C:\Users\agusf\Source\Repos\Ejercicio42\Ejercicio42\obj\Debug\Ejercicio42.pdb

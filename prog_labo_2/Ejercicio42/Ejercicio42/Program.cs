@@ -11,6 +11,22 @@ namespace Ejercicio42
     {
         static void Main(string[] args)
         {
+            try
+            {
+                OtraClase oc = new OtraClase();
+            }
+            catch(Exception e)
+            {
+                Console.WriteLine(e.Message);
+
+                while (e.InnerException != null)
+                {
+                    e = e.InnerException;
+                    Console.WriteLine(e.Message);
+                }
+            }
+
+            Console.ReadKey();
         }
     }
 }
