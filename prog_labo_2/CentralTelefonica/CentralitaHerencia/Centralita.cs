@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace CentralitaHerencia
 {
 
-    public class Centralita
+    public class Centralita : IGuardar<string>
     {
         #region Atributos
         private List<Llamada> listaDeLlamadas;
@@ -44,6 +44,18 @@ namespace CentralitaHerencia
             get
             {
                 return CalcularGanancia(Llamada.TipoLlamada.Todas);
+            }
+        }
+
+        public string RutaDeArchivo
+        {
+            get
+            {
+                return "";
+            }
+            set 
+            {
+
             }
         }
 
@@ -128,6 +140,20 @@ namespace CentralitaHerencia
             this.Llamadas.Sort(Llamada.OrdenarPorDuracion);
         }
 
+        public bool Guardar()
+        {
+            string datos = this.Mostrar();
+            return true;
+        }
+
+        public string Leer()
+        {
+            throw new NotImplementedException();
+        }
+
+        #endregion
+
+        #region Operadores
         public static bool operator ==(Centralita c, Llamada llamada)
         {
             bool b = false;

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CentralitaHerencia
 {
-    public class Local : Llamada
+    public class Local : Llamada, IGuardar<Local>
     {
         #region Atributos
         protected float costo;
@@ -19,6 +19,18 @@ namespace CentralitaHerencia
             {
                 float costo = CalcularCosto();
                 return costo;
+            }
+        }
+
+        public string RutaDeArchivo 
+        { 
+            get
+            {
+                return "";
+            } 
+            set 
+            {
+
             }
         }
         #endregion
@@ -64,6 +76,16 @@ namespace CentralitaHerencia
                 b = true;
             }
             return b;
+        }
+
+        public bool Guardar()
+        {
+            throw new NotImplementedException();
+        }
+
+        public Local Leer()
+        {
+            throw new NotImplementedException();
         }
         #endregion
     }

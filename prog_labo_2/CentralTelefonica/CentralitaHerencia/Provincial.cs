@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CentralitaHerencia
 {
-    public class Provincial : Llamada
+    public class Provincial : Llamada, IGuardar<Provincial>
     {
         #region Atributos
         public enum Franja
@@ -24,6 +24,19 @@ namespace CentralitaHerencia
                 return CalcularCosto();
             }
         }
+
+        public string RutaDeArchivo
+        {
+            get
+            {
+                return "";
+            }
+            set
+            {
+
+            }
+        }
+
         #endregion
 
         #region Metodos
@@ -81,6 +94,16 @@ namespace CentralitaHerencia
                 b = true;
             }
             return b;
+        }
+
+        public bool Guardar()
+        {
+            throw new NotImplementedException();
+        }
+
+        public Provincial Leer()
+        {
+            throw new NotImplementedException();
         }
         #endregion
     }
