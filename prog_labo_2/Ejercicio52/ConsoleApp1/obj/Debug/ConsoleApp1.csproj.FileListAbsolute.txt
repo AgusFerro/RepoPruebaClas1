@@ -1,0 +1,10 @@
+C:\Users\agusf\Source\Repos\Ejercicio52\ConsoleApp1\bin\Debug\ConsoleApp1.exe.config
+C:\Users\agusf\Source\Repos\Ejercicio52\ConsoleApp1\bin\Debug\ConsoleApp1.exe
+C:\Users\agusf\Source\Repos\Ejercicio52\ConsoleApp1\bin\Debug\ConsoleApp1.pdb
+C:\Users\agusf\Source\Repos\Ejercicio52\ConsoleApp1\bin\Debug\Entidades.dll
+C:\Users\agusf\Source\Repos\Ejercicio52\ConsoleApp1\bin\Debug\Entidades.pdb
+C:\Users\agusf\Source\Repos\Ejercicio52\ConsoleApp1\obj\Debug\ConsoleApp1.csprojAssemblyReference.cache
+C:\Users\agusf\Source\Repos\Ejercicio52\ConsoleApp1\obj\Debug\ConsoleApp1.csproj.CoreCompileInputs.cache
+C:\Users\agusf\Source\Repos\Ejercicio52\ConsoleApp1\obj\Debug\ConsoleApp1.csproj.CopyComplete
+C:\Users\agusf\Source\Repos\Ejercicio52\ConsoleApp1\obj\Debug\ConsoleApp1.exe
+C:\Users\agusf\Source\Repos\Ejercicio52\ConsoleApp1\obj\Debug\ConsoleApp1.pdb
