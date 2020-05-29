@@ -33,7 +33,6 @@ namespace Test
             c = c + l1;
             c = c + l2;
             c = c + l3;
-            c = c + l4;
 
             try { c = c + l4; }
 
@@ -45,6 +44,7 @@ namespace Test
             c.OrdenarLlamadas();
             Console.WriteLine(c.ToString());
 
+            Console.WriteLine(c.Leer());
             Console.ReadKey();
 
         }

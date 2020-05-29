@@ -1,0 +1,13 @@
+C:\Users\agusf\Source\Repos\Ejercicio56\Ejercicio56\bin\Debug\Ejercicio56.exe.config
+C:\Users\agusf\Source\Repos\Ejercicio56\Ejercicio56\bin\Debug\Ejercicio56.exe
+C:\Users\agusf\Source\Repos\Ejercicio56\Ejercicio56\bin\Debug\Ejercicio56.pdb
+C:\Users\agusf\Source\Repos\Ejercicio56\Ejercicio56\obj\Debug\Ejercicio56.csprojAssemblyReference.cache
+C:\Users\agusf\Source\Repos\Ejercicio56\Ejercicio56\obj\Debug\Ejercicio56.Form1.resources
+C:\Users\agusf\Source\Repos\Ejercicio56\Ejercicio56\obj\Debug\Ejercicio56.Properties.Resources.resources
+C:\Users\agusf\Source\Repos\Ejercicio56\Ejercicio56\obj\Debug\Ejercicio56.csproj.GenerateResource.cache
+C:\Users\agusf\Source\Repos\Ejercicio56\Ejercicio56\obj\Debug\Ejercicio56.csproj.CoreCompileInputs.cache
+C:\Users\agusf\Source\Repos\Ejercicio56\Ejercicio56\obj\Debug\Ejercicio56.exe
+C:\Users\agusf\Source\Repos\Ejercicio56\Ejercicio56\obj\Debug\Ejercicio56.pdb
+C:\Users\agusf\Source\Repos\Ejercicio56\Ejercicio56\bin\Debug\IO.dll
+C:\Users\agusf\Source\Repos\Ejercicio56\Ejercicio56\bin\Debug\IO.pdb
+C:\Users\agusf\Source\Repos\Ejercicio56\Ejercicio56\obj\Debug\Ejercicio56.csproj.CopyComplete

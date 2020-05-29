@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="Centralita.cs" />
     <Compile Include="CentralitaException.cs" />
+    <Compile Include="FallaLogException.cs" />
     <Compile Include="IGuardar.cs" />
     <Compile Include="Llamada.cs" />
     <Compile Include="Local.cs" />

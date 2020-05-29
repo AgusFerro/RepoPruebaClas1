@@ -1,0 +1,6 @@
+C:\Users\agusf\Source\Repos\Ejercicio56\IO\obj\Debug\IO.csprojAssemblyReference.cache
+C:\Users\agusf\Source\Repos\Ejercicio56\IO\obj\Debug\IO.csproj.CoreCompileInputs.cache
+C:\Users\agusf\Source\Repos\Ejercicio56\IO\bin\Debug\IO.dll
+C:\Users\agusf\Source\Repos\Ejercicio56\IO\bin\Debug\IO.pdb
+C:\Users\agusf\Source\Repos\Ejercicio56\IO\obj\Debug\IO.dll
+C:\Users\agusf\Source\Repos\Ejercicio56\IO\obj\Debug\IO.pdb

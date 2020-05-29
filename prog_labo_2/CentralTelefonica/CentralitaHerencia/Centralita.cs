@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -142,13 +143,25 @@ namespace CentralitaHerencia
 
         public bool Guardar()
         {
-            string datos = this.Mostrar();
-            return true;
+            bool success = false;
+            string path = @"C:\\Users\agusf\Source\Repos\CentralTelefonica\bitacora.txt";
+            string[] mes = {"Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiempre","Octubre","Noviembre","Diciembre"};
+            string datos = $"{DateTime.Now.DayOfWeek} {DateTime.Now.Day} de {mes[DateTime.Now.Month - 1]} de {DateTime.Now.Year} {DateTime.Now.Hour}:{DateTime.Now.Minute} - Se realizo una llamada";
+
+            StreamWriter sw = new StreamWriter(path, File.Exists(path));
+            sw.WriteLine(datos);
+            sw.Close();
+            success = true;
+            
+            return success;
         }
 
         public string Leer()
         {
-            throw new NotImplementedException();
+            string path = @"C:\\Users\agusf\Source\Repos\CentralTelefonica\bitacora.txt";
+            StreamReader sr = new StreamReader(path);
+
+            return sr.ReadToEnd();
         }
 
         #endregion
@@ -179,6 +192,10 @@ namespace CentralitaHerencia
             if((c == nuevaLlamada) == false)
             {
                 c.AgregarLlamada(nuevaLlamada);
+                if(c.Guardar() != true)
+                {
+                    throw new FallaLogException();
+                }
             }
             else
             {
