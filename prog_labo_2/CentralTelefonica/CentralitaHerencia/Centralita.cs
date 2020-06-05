@@ -14,6 +14,7 @@ namespace CentralitaHerencia
         #region Atributos
         private List<Llamada> listaDeLlamadas;
         protected string razonSocial;
+        private string path;
         #endregion
 
         #region Propiedades
@@ -52,11 +53,12 @@ namespace CentralitaHerencia
         {
             get
             {
-                return "";
+                //return @"C:\\Users\agusf\Source\Repos\CentralTelefonica\bitacora.txt";
+                return this.path;
             }
             set 
             {
-
+                this.path = value;
             }
         }
 
@@ -144,11 +146,11 @@ namespace CentralitaHerencia
         public bool Guardar()
         {
             bool success = false;
-            string path = @"C:\\Users\agusf\Source\Repos\CentralTelefonica\bitacora.txt";
+            this.RutaDeArchivo = @"C:\\Users\agusf\Source\Repos\CentralTelefonica\bitacora.txt";
             string[] mes = {"Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiempre","Octubre","Noviembre","Diciembre"};
             string datos = $"{DateTime.Now.DayOfWeek} {DateTime.Now.Day} de {mes[DateTime.Now.Month - 1]} de {DateTime.Now.Year} {DateTime.Now.Hour}:{DateTime.Now.Minute} - Se realizo una llamada";
 
-            StreamWriter sw = new StreamWriter(path, File.Exists(path));
+            StreamWriter sw = new StreamWriter(this.RutaDeArchivo, File.Exists(this.RutaDeArchivo));
             sw.WriteLine(datos);
             sw.Close();
             success = true;
@@ -158,8 +160,7 @@ namespace CentralitaHerencia
 
         public string Leer()
         {
-            string path = @"C:\\Users\agusf\Source\Repos\CentralTelefonica\bitacora.txt";
-            StreamReader sr = new StreamReader(path);
+            StreamReader sr = new StreamReader(this.RutaDeArchivo);
 
             return sr.ReadToEnd();
         }

@@ -1,0 +1,10 @@
+C:\Users\agusf\Source\Repos\PrimerEjercicioSQL\PrimerEjercicioSQL\bin\Debug\PrimerEjercicioSQL.exe.config
+C:\Users\agusf\Source\Repos\PrimerEjercicioSQL\PrimerEjercicioSQL\bin\Debug\PrimerEjercicioSQL.exe
+C:\Users\agusf\Source\Repos\PrimerEjercicioSQL\PrimerEjercicioSQL\bin\Debug\PrimerEjercicioSQL.pdb
+C:\Users\agusf\Source\Repos\PrimerEjercicioSQL\PrimerEjercicioSQL\obj\Debug\PrimerEjercicioSQL.csprojAssemblyReference.cache
+C:\Users\agusf\Source\Repos\PrimerEjercicioSQL\PrimerEjercicioSQL\obj\Debug\PrimerEjercicioSQL.Form1.resources
+C:\Users\agusf\Source\Repos\PrimerEjercicioSQL\PrimerEjercicioSQL\obj\Debug\PrimerEjercicioSQL.Properties.Resources.resources
+C:\Users\agusf\Source\Repos\PrimerEjercicioSQL\PrimerEjercicioSQL\obj\Debug\PrimerEjercicioSQL.csproj.GenerateResource.cache
+C:\Users\agusf\Source\Repos\PrimerEjercicioSQL\PrimerEjercicioSQL\obj\Debug\PrimerEjercicioSQL.csproj.CoreCompileInputs.cache
+C:\Users\agusf\Source\Repos\PrimerEjercicioSQL\PrimerEjercicioSQL\obj\Debug\PrimerEjercicioSQL.exe
+C:\Users\agusf\Source\Repos\PrimerEjercicioSQL\PrimerEjercicioSQL\obj\Debug\PrimerEjercicioSQL.pdb

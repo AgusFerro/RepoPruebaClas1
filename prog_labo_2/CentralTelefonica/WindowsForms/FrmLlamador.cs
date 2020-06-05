@@ -127,12 +127,34 @@ namespace WindowsForms
                 Provincial.Franja franjas;
                 Enum.TryParse<Provincial.Franja>(cmbFranja.SelectedValue.ToString(), out franjas);
 
-                this.centralita += new Provincial(txtNroOrigen.Text,franjas,r1.Next(1,50),txtNroDestino.Text);
+                try
+                {
+                    this.centralita += new Provincial(txtNroOrigen.Text, franjas, r1.Next(1, 50), txtNroDestino.Text);
+                }
+                catch(FallaLogException ex)
+                {
+                    MessageBox.Show("Bitacora", "No se pudo agregar la llamada a la bitacora", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                catch(CentralitaException ex)
+                {
+                    MessageBox.Show("Central", "No se pudo agregar la llamada", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
             }
             else
             {
-                double costo = r1.Next(0, 5) + r1.NextDouble();
-                this.centralita += new Local(txtNroOrigen.Text, r1.Next(1, 50), txtNroDestino.Text,(float)costo);
+                try
+                {
+                    double costo = r1.Next(0, 5) + r1.NextDouble();
+                    this.centralita += new Local(txtNroOrigen.Text, r1.Next(1, 50), txtNroDestino.Text, (float)costo);
+                }
+                catch (FallaLogException ex)
+                {
+                    MessageBox.Show("Bitacora", "No se pudo agregar la llamada a la bitacora", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                catch (CentralitaException ex)
+                {
+                    MessageBox.Show("Central", "No se pudo agregar la llamada", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
             }
         }
     }

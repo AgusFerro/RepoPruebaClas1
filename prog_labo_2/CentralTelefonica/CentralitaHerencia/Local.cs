@@ -3,13 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml;
+using System.Xml.Serialization;
 
 namespace CentralitaHerencia
 {
     public class Local : Llamada, IGuardar<Local>
     {
         #region Atributos
-        protected float costo;
+        //protected float costo;
+        public float costo;
+        private string path;
         #endregion
 
         #region Propiedades
@@ -26,16 +30,18 @@ namespace CentralitaHerencia
         { 
             get
             {
-                return "";
+                return this.path;
             } 
             set 
             {
-
+                this.path = value;
             }
         }
         #endregion
 
         #region Metodos
+        public Local() : base()
+        { }
         public Local(string origen, float duracion, string destino, float costo) : base(duracion, destino, origen)
         {
             this.costo = costo;
@@ -80,12 +86,48 @@ namespace CentralitaHerencia
 
         public bool Guardar()
         {
-            throw new NotImplementedException();
+            bool success;
+            //string path = @"C:\Users\agusf\Source\Repos\CentralTelefonica\Local.xml";
+            XmlTextWriter writer = new XmlTextWriter(this.RutaDeArchivo, Encoding.UTF8);
+            XmlSerializer ser = new XmlSerializer(this.GetType());
+
+            try
+            {
+                ser.Serialize(writer, this);
+                success = true;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                success = false;
+            }
+            finally
+            {
+                writer.Close();
+            }
+            return success;
         }
 
         public Local Leer()
         {
-            throw new NotImplementedException();
+            XmlTextReader reader = new XmlTextReader(this.RutaDeArchivo);
+            XmlSerializer ser = new XmlSerializer(this.GetType());
+            Local dato = new Local();
+            try
+            {
+                dato = (Local)ser.Deserialize(reader);
+
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            finally
+            {
+                reader.Close();
+            }
+
+            return dato;
         }
         #endregion
     }

@@ -36,11 +36,14 @@ namespace Test
 
             try { c = c + l4; }
 
-            catch(CentralitaException e)
+            catch (CentralitaException e)
             {
                 Console.WriteLine(e.Message);
             }
-            
+
+            l2.RutaDeArchivo = @"C:\Users\agusf\Source\Repos\CentralTelefonica\Provincial.xml";
+            l2.Guardar();
+
             c.OrdenarLlamadas();
             Console.WriteLine(c.ToString());
 

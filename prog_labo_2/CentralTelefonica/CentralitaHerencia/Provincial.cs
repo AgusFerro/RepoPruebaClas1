@@ -1,8 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml;
+using System.Xml.Serialization;
 
 namespace CentralitaHerencia
 {
@@ -13,7 +17,9 @@ namespace CentralitaHerencia
         {
             Franja_1, Franja_2, Franja_3
         }
-        protected Franja franjaHoraria;
+        //protected Franja franjaHoraria;
+        public Franja franjaHoraria;
+        private string path;
         #endregion
 
         #region Propiedades
@@ -29,11 +35,12 @@ namespace CentralitaHerencia
         {
             get
             {
-                return "";
+                return this.path;
+                
             }
             set
             {
-
+                this.path = value;
             }
         }
 
@@ -41,6 +48,8 @@ namespace CentralitaHerencia
 
         #region Metodos
 
+        public Provincial() : base()
+        { }
         public Provincial(string origen, Franja miFranja , float duracion, string destino) : base(duracion, destino, origen)
         {
             this.franjaHoraria = miFranja;
@@ -98,12 +107,47 @@ namespace CentralitaHerencia
 
         public bool Guardar()
         {
-            throw new NotImplementedException();
+            bool success;
+            //string path = @"C:\Users\agusf\Source\Repos\CentralTelefonica\Provincial.xml";
+            XmlTextWriter writer = new XmlTextWriter(this.RutaDeArchivo, Encoding.UTF8);
+            XmlSerializer ser = new XmlSerializer(this.GetType());
+
+            try 
+            {
+                ser.Serialize(writer, this);
+                success = true;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                success = false;
+            }
+            finally
+            {
+                writer.Close();
+            }
+            return success;
         }
 
         public Provincial Leer()
         {
-            throw new NotImplementedException();
+            XmlTextReader reader = new XmlTextReader(this.RutaDeArchivo);
+            XmlSerializer ser = new XmlSerializer(this.GetType());
+            Provincial dato = new Provincial();
+            try
+            {
+                dato = (Provincial)ser.Deserialize(reader);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            finally
+            {
+                reader.Close();
+            }
+
+            return dato;
         }
         #endregion
     }

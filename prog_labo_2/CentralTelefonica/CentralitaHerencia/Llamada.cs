@@ -4,9 +4,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml;
+using System.Xml.Serialization;
 
 namespace CentralitaHerencia
 {
+    [XmlInclude(typeof(Local))]
+    [XmlInclude(typeof(Provincial))]
     public abstract class Llamada
     {
         #region Atributos
@@ -15,9 +19,13 @@ namespace CentralitaHerencia
             Local,Provincial,Todas
         }
 
-        protected float duracion;
-        protected string nroDestino;
-        protected string nroOrigen;
+        //protected float duracion;
+        //protected string nroDestino;
+        //protected string nroOrigen;
+
+        public float duracion;
+        public string nroDestino;
+        public string nroOrigen;
 
         #endregion
 
@@ -55,6 +63,7 @@ namespace CentralitaHerencia
         #endregion
 
         #region Metodos
+        public Llamada() { }
         public Llamada(float duracion, string nroDestino, string nroOrigen)
         {
             this.duracion = duracion;
