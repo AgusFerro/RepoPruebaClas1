@@ -1,0 +1,13 @@
+C:\Users\agusf\Source\Repos\Ejercicio61\WindowsForms\bin\Debug\WindowsForms.exe.config
+C:\Users\agusf\Source\Repos\Ejercicio61\WindowsForms\bin\Debug\WindowsForms.exe
+C:\Users\agusf\Source\Repos\Ejercicio61\WindowsForms\bin\Debug\WindowsForms.pdb
+C:\Users\agusf\Source\Repos\Ejercicio61\WindowsForms\bin\Debug\Entidades.dll
+C:\Users\agusf\Source\Repos\Ejercicio61\WindowsForms\bin\Debug\Entidades.pdb
+C:\Users\agusf\Source\Repos\Ejercicio61\WindowsForms\obj\Debug\WindowsForms.csprojAssemblyReference.cache
+C:\Users\agusf\Source\Repos\Ejercicio61\WindowsForms\obj\Debug\WindowsForms.Form1.resources
+C:\Users\agusf\Source\Repos\Ejercicio61\WindowsForms\obj\Debug\WindowsForms.Properties.Resources.resources
+C:\Users\agusf\Source\Repos\Ejercicio61\WindowsForms\obj\Debug\WindowsForms.csproj.GenerateResource.cache
+C:\Users\agusf\Source\Repos\Ejercicio61\WindowsForms\obj\Debug\WindowsForms.csproj.CoreCompileInputs.cache
+C:\Users\agusf\Source\Repos\Ejercicio61\WindowsForms\obj\Debug\WindowsForms.csproj.CopyComplete
+C:\Users\agusf\Source\Repos\Ejercicio61\WindowsForms\obj\Debug\WindowsForms.exe
+C:\Users\agusf\Source\Repos\Ejercicio61\WindowsForms\obj\Debug\WindowsForms.pdb
