@@ -1,0 +1,9 @@
+C:\Users\agusf\Source\Repos\Ejercicio67\Ejercicio67\bin\Debug\Ejercicio67.exe.config
+C:\Users\agusf\Source\Repos\Ejercicio67\Ejercicio67\bin\Debug\Ejercicio67.exe
+C:\Users\agusf\Source\Repos\Ejercicio67\Ejercicio67\bin\Debug\Ejercicio67.pdb
+C:\Users\agusf\Source\Repos\Ejercicio67\Ejercicio67\obj\Debug\Ejercicio67.csprojAssemblyReference.cache
+C:\Users\agusf\Source\Repos\Ejercicio67\Ejercicio67\obj\Debug\Ejercicio67.Properties.Resources.resources
+C:\Users\agusf\Source\Repos\Ejercicio67\Ejercicio67\obj\Debug\Ejercicio67.csproj.GenerateResource.cache
+C:\Users\agusf\Source\Repos\Ejercicio67\Ejercicio67\obj\Debug\Ejercicio67.csproj.CoreCompileInputs.cache
+C:\Users\agusf\Source\Repos\Ejercicio67\Ejercicio67\obj\Debug\Ejercicio67.exe
+C:\Users\agusf\Source\Repos\Ejercicio67\Ejercicio67\obj\Debug\Ejercicio67.pdb

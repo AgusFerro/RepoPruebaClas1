@@ -1,0 +1,14 @@
+C:\Users\agusf\Source\Repos\Ejercicio63\Ejercicio63\bin\Debug\Ejercicio63.exe.config
+C:\Users\agusf\Source\Repos\Ejercicio63\Ejercicio63\bin\Debug\Ejercicio63.exe
+C:\Users\agusf\Source\Repos\Ejercicio63\Ejercicio63\bin\Debug\Ejercicio63.pdb
+C:\Users\agusf\Source\Repos\Ejercicio63\Ejercicio63\obj\Debug\Ejercicio63.csprojAssemblyReference.cache
+C:\Users\agusf\Source\Repos\Ejercicio63\Ejercicio63\obj\Debug\Ejercicio63.Form1.resources
+C:\Users\agusf\Source\Repos\Ejercicio63\Ejercicio63\obj\Debug\Ejercicio63.Properties.Resources.resources
+C:\Users\agusf\Source\Repos\Ejercicio63\Ejercicio63\obj\Debug\Ejercicio63.csproj.GenerateResource.cache
+C:\Users\agusf\Source\Repos\Ejercicio63\Ejercicio63\obj\Debug\Ejercicio63.csproj.CoreCompileInputs.cache
+C:\Users\agusf\Source\Repos\Ejercicio63\Ejercicio63\obj\Debug\Ejercicio63.exe
+C:\Users\agusf\Source\Repos\Ejercicio63\Ejercicio63\obj\Debug\Ejercicio63.pdb
+C:\Users\agusf\Source\Repos\Ejercicio63\Ejercicio63\bin\Debug\Ejercicio67.exe
+C:\Users\agusf\Source\Repos\Ejercicio63\Ejercicio63\bin\Debug\Ejercicio67.pdb
+C:\Users\agusf\Source\Repos\Ejercicio63\Ejercicio63\bin\Debug\Ejercicio67.exe.config
+C:\Users\agusf\Source\Repos\Ejercicio63\Ejercicio63\obj\Debug\Ejercicio63.csproj.CopyComplete

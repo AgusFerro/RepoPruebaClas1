@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using CentralitaHerencia;
+using EntidadesDAO;
 
 namespace Test
 {
@@ -41,6 +42,31 @@ namespace Test
                 Console.WriteLine(e.Message);
             }
 
+            /*
+            //Agrego las llamadas de Centralita a la DB
+            foreach(Llamada llamada in c.Llamadas)
+            {
+                if(llamada is Local)
+                {
+                    LocalDAO.Guardar((Local)llamada);
+                }
+                else if (llamada is Provincial)
+                {
+                    ProvincialDAO.Guardar((Provincial)llamada);
+                }
+            }*/
+
+            try
+            {
+                c += ProvincialDAO.Leer(1);
+            }
+            catch(Exception e) 
+            {
+                Console.WriteLine(e.Message);
+            }
+
+            /*
+            //Agrego la llamada a un archivo xml
             l2.RutaDeArchivo = @"C:\Users\agusf\Source\Repos\CentralTelefonica\Provincial.xml";
             l2.Guardar();
 
@@ -48,6 +74,8 @@ namespace Test
             Console.WriteLine(c.ToString());
 
             Console.WriteLine(c.Leer());
+            */
+
             Console.ReadKey();
 
         }

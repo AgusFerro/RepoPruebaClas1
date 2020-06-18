@@ -1,0 +1,10 @@
+C:\Users\agusf\Source\Repos\EjercicioMetodosDeExtension\EjercicioMetodosDeExtension\bin\Debug\EjercicioMetodosDeExtension.exe.config
+C:\Users\agusf\Source\Repos\EjercicioMetodosDeExtension\EjercicioMetodosDeExtension\bin\Debug\EjercicioMetodosDeExtension.exe
+C:\Users\agusf\Source\Repos\EjercicioMetodosDeExtension\EjercicioMetodosDeExtension\bin\Debug\EjercicioMetodosDeExtension.pdb
+C:\Users\agusf\Source\Repos\EjercicioMetodosDeExtension\EjercicioMetodosDeExtension\bin\Debug\Entidades.dll
+C:\Users\agusf\Source\Repos\EjercicioMetodosDeExtension\EjercicioMetodosDeExtension\bin\Debug\Entidades.pdb
+C:\Users\agusf\Source\Repos\EjercicioMetodosDeExtension\EjercicioMetodosDeExtension\obj\Debug\EjercicioMetodosDeExtension.csprojAssemblyReference.cache
+C:\Users\agusf\Source\Repos\EjercicioMetodosDeExtension\EjercicioMetodosDeExtension\obj\Debug\EjercicioMetodosDeExtension.csproj.CoreCompileInputs.cache
+C:\Users\agusf\Source\Repos\EjercicioMetodosDeExtension\EjercicioMetodosDeExtension\obj\Debug\EjercicioMetodosDeExtension.csproj.CopyComplete
+C:\Users\agusf\Source\Repos\EjercicioMetodosDeExtension\EjercicioMetodosDeExtension\obj\Debug\EjercicioMetodosDeExtension.exe
+C:\Users\agusf\Source\Repos\EjercicioMetodosDeExtension\EjercicioMetodosDeExtension\obj\Debug\EjercicioMetodosDeExtension.pdb

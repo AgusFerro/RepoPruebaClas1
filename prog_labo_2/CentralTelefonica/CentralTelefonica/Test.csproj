@@ -54,6 +54,10 @@
       <Project>{29ef0abd-0b48-4df3-aad1-8c3eceb6f6b8}</Project>
       <Name>CentralitaHerencia</Name>
     </ProjectReference>
+    <ProjectReference Include="..\EntidadesDAO\EntidadesDAO.csproj">
+      <Project>{54b76a06-9414-4c7c-96eb-01d254996e40}</Project>
+      <Name>EntidadesDAO</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -8,3 +8,5 @@ C:\Users\agusf\Source\Repos\CentralTelefonica\CentralTelefonica\obj\Debug\Test.c
 C:\Users\agusf\Source\Repos\CentralTelefonica\CentralTelefonica\obj\Debug\Test.csproj.CopyComplete
 C:\Users\agusf\Source\Repos\CentralTelefonica\CentralTelefonica\obj\Debug\CentralTelefonica.exe
 C:\Users\agusf\Source\Repos\CentralTelefonica\CentralTelefonica\obj\Debug\CentralTelefonica.pdb
+C:\Users\agusf\Source\Repos\CentralTelefonica\CentralTelefonica\bin\Debug\EntidadesDAO.dll
+C:\Users\agusf\Source\Repos\CentralTelefonica\CentralTelefonica\bin\Debug\EntidadesDAO.pdb
