@@ -1,0 +1,11 @@
+C:\Users\agusf\Source\Repos\Ferro.Agustin.2C\EntidadesDAO\bin\Debug\EntidadesDAO.dll
+C:\Users\agusf\Source\Repos\Ferro.Agustin.2C\EntidadesDAO\bin\Debug\EntidadesDAO.pdb
+C:\Users\agusf\Source\Repos\Ferro.Agustin.2C\EntidadesDAO\obj\Debug\EntidadesDAO.csprojAssemblyReference.cache
+C:\Users\agusf\Source\Repos\Ferro.Agustin.2C\EntidadesDAO\obj\Debug\EntidadesDAO.csproj.CoreCompileInputs.cache
+C:\Users\agusf\Source\Repos\Ferro.Agustin.2C\EntidadesDAO\obj\Debug\EntidadesDAO.dll
+C:\Users\agusf\Source\Repos\Ferro.Agustin.2C\EntidadesDAO\obj\Debug\EntidadesDAO.pdb
+C:\Users\agusf\Source\Repos\Ferro.Agustin.2C\EntidadesDAO\bin\Debug\Entidades.dll
+C:\Users\agusf\Source\Repos\Ferro.Agustin.2C\EntidadesDAO\bin\Debug\Entidades.pdb
+C:\Users\agusf\Source\Repos\Ferro.Agustin.2C\EntidadesDAO\obj\Debug\EntidadesDAO.csproj.CopyComplete
+C:\Users\agusf\Source\Repos\Ferro.Agustin.2C\EntidadesDAO\bin\Debug\Archivos.dll
+C:\Users\agusf\Source\Repos\Ferro.Agustin.2C\EntidadesDAO\bin\Debug\Archivos.pdb
